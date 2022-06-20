@@ -1,0 +1,333 @@
+<html><body>
+
+<h1 align = center> Program 4: Video Poker </h1>
+<hr>
+<h2>Submit deadline: Sunday, April 24 at 11:55 p.m.</h2>
+<hr> 
+In program 4, you will implement a popular casino game called video poker. The
+card deck contains 52 cards, 13 of each suit. At the beginning of the game, the
+deck is shuffled. Then the top five cards of the deck are presented to the player. <p>
+The player can reject none, some, or all of the cards. The rejected cards are
+replaced from the top of the deck. 
+<p>
+Now the hand is scored. 
+<p>
+Your program will announce which (only 1) of the following matches the hand:
+<li>Royal Flush -- The best possible hand in poker. A 10, jack, queen, king, and ace, all of the same suit.
+<li>Straight Flush -- A straight and a flush: Five cards with consecutive values of the same suit.
+<li>Four of a Kind -- Four cards of the same value, such as four queens.
+<li>Full House -- Three of a kind and a pair, for example, three queens and two 5's.
+<li>Flush -- Five cards, not necessarily in order, of the same suit.
+<li>Straight -- Five cards with consecutive values, not necessarily of the same suit, such as 4, 5, 6, 7, and 8. The ace can either precede a 2 or follow a
+king.
+<li> Two pairs -- Two pairs, for example, two queens and two 5's.
+<li> One pair -- One pair, for example, two 5's.
+<li> No pair -- The lowest hand, containing five separate cards that do not match to create any of the hands above.
+
+<hr>
+<h2>Specifications</h2>
+<i>Specifications</i> provide details on <strong>how</strong> your work must be done.
+<h3>The Shuffled Deck </h3>
+A shuffled deck will be provided as a file. The file will be named 
+<strong>deck.txt</strong>.  The file will contain 52 lines, one for each card. 
+<p>
+Each line of the file will contain two fields, a number from 1 (for ace) to
+13, and a character representing the suit: <strong>H</strong> for hearts,
+ <strong>S</strong> for spades,
+<strong>C</strong> for clubs, and <strong>D</strong> for diamonds. 
+<p>
+The face cards will be represented as numbers: 11 for jack, 12, for queen,
+and 13 for king.
+<p>
+A sample deck is provided in <a href = "./deck.txt">deck.txt</a>. Here are some sample decks with the first five cards in the deck corresponding to a specific type of hand. You will have to rename the deck to deck.txt to use. 
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/royalFlush.txt">royalFlush.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/straightFlush.txt">straightFlush.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/fourOfaKind.txt">fourOfaKind.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/fullHouse.txt">fullHouse.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/flush.txt">flush.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/straight.txt">straight.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/twoPair.txt">twoPair.txt </a></p>
+<p><a href="http://courses.ncsu.edu/csc116/lec/001/PROGRAMS/PROGRAM4/STACKEDDECKS/noPair.txt">noPair.txt </a></p>
+<p>
+If your program cannot successfully open <strong>deck.txt</strong>, display a message to
+the console and exit. If your program should encounter problems while
+reading the deck , also
+put a message on the console and exit. We will not deliberately put
+errors in the <strong>deck.txt</strong> file. 
+
+<hr>
+<h3>The GUI </h3>
+The GUI must be in a class called <strong>PokerGUI</strong>. You will
+complete a GUI to provide the following functionality: 
+<li> The user is presented with 5 cards. Cards numbered 
+11, 12, and 13  in the deck.txt must be displayed
+as Jack, Queen and King respectively. The Card numbered 1 must be displayed
+as Ace.
+<li> The user can select none, some, or all to be replaced and then view
+the resulting hand.  After a user selects a button to replace cards, you
+must disable the appropriate buttons. For example, if a user wants to
+replace all cards, then all replace buttons should become disabled. More
+specifics are given below. 
+<li> The score (i.e. type of match) is displayed to the user when a 
+ScoreHand button is clicked.  The message that is displayed must match
+the ones described in the model specification.
+
+<li> A Quit button  ends the program. [The game is over after one hand but
+the user must shut down the program using the Quit button].
+<p>
+Below is one example of the GUI:<p>
+<img src = "./pokergui.gif" >
+<p>
+The code that produced this gui is at <a href = "./PokerGUI.java">
+PokerGUI.java</a>. It must be completed by you. You must add
+<li> javadoc 
+<li> appropriate button disabling
+<li> connection to your model
+<p> 
+This GUI was created by Alex Balik, TA for section 005.  Alex used a 
+<code>BorderLayout</code>. He placed the cards  in 
+<code>BorderLayout.WEST</code>, the replace buttons in <code>BorderLayout.CENTER</code> and the rightmost buttons in the <code>BorderLayout.EAST</code>.
+The top is a textfield in <code>BorderLayout.NORTH</code> and the
+score button is in <code>BorderLayout.SOUTH</code>.
+<p>
+He used <code>JPanel</code>s for the cards and  buttons, setting them to
+<code>GridLayout</code> to get the even spacing of the components.
+<p>
+He set the larger font size for components using the <code>setFont</code> method.
+For example, the ScoreHand button was set to 18 point font:
+<pre>
+btnScore.setFont(new Font("Times",Font.BOLD,18));
+</pre>
+He got that interesting color of red using:
+<pre>
+btnCard1.setBackground(Color.red.darker());
+</pre>
+You can check out colors on the <a href = "http://java.sun.com/j2se/1.4.2/docs/api/">
+http://java.sun.com/j2se/1.4.2/docs/api/ </a>. Just select the <strong>Color</strong>
+class.
+<p>
+It was mentioned earlier that you must disable buttons. 
+To disable a button named <code>btnReplaceAll</code>, use the <code>setEnabled</code>
+ method:
+<pre>
+btnReplaceAll.setEnabled(false);
+</pre>
+Here is the specification for disabling buttons:
+<table         BORDER="1" cellspacing="2" cellpadding="2" id=infoblock >
+<tr> 
+<th colupan="2" valign="top" bgcolor="#ffffcc">Button clicked</th>
+<th colspan="2" valign="top" bgcolor="#ffffcc">Disable these buttons</th>
+</tr> 
+<tr>
+<td>Replace </td>
+<td>The Replace button that was clicked, the ReplaceAll and the ReplaceNone
+buttons </td>
+</tr>
+<tr>
+<td>Replace All </td>
+<td>All Replace buttons, Replace All and Replace None </td>
+</tr>
+<tr>
+<td>Replace None </td>
+<td>All Replace buttons, Replace All and Replace None </td>
+</tr>
+</table>
+<hr>
+<h3>The Model </h3>
+The model must be in a class called <strong>PokerModel</strong>. The model
+<b>must</b> manage the card deck <i>and</i> the hand of cards using arrays of <strong>Card
+</strong>objects. The card deck will contain 52 card objects and the
+user's hand wil contain 5 card objects.
+<p>
+The <a href = "Card.java">Card.java</a> is provided for you. The <strong>Card
+</strong> class has been designed so that you can use another java class
+to sort an array of <strong>Card</strong>s. The <strong>Card</strong> class
+has a main which demonstrates how to sort a Card array. The line of
+code is
+<pre>
+Arrays.sort (array, 0, 3);
+</pre>
+You must provide 
+<pre>
+import java.util.*;
+</pre>
+to use the sort.
+<br>
+The parameters are the name of the array to be sorted, the index of
+the first element, and the total number of elements to be sorted (not
+the last index).  The Cards will be sorted first based on the value on
+the Card. If two (or more) Cards have the same value, they will be ordered
+by suit. That ordering is alphabetical: "C","D","H", then "S". 
+<p>An  ace has the value of 1 so it gets sorted as a low value card but
+can be used as a high card (e.g. Royal Flush). Your code must deal with
+this if you choose to use the sort routine. 
+The sort statement belongs in your model.
+<p>
+
+
+<p>
+The model must have the following public methods:
+<strong>
+<li>public PokerModel() 
+</strong>
+<br>Null constructor, which must initialize all of your instance variables.
+This includes the deck of cards and the initial hand.
+<strong>
+<li>public Card getCard (int whichOne)
+</strong>
+<br>
+Method which accepts a integer value  0,1,2,3, or 4 and returns
+the corresponding Card in the hand of cards. 
+<strong>
+<li>public Card replaceCard (int whichOne)
+</strong><br>
+Method which receives an integer value 0, 1,2, 3, or 4 and 
+replaces that card in the hand of cards.  The replacement card will be
+the next card in the deck. The method  returns the replacement Card.
+<strong>
+<li>public String scoreHand()
+</strong>
+<br>
+Method  that returns a String indicating one of tthe following
+matches for the current hand:
+<pre>
+Royal Flush
+Straight Flush
+Four of a Kind
+Full House
+Flush
+Straight
+Two Pairs
+One Pair
+No Pair
+</pre>
+<p>
+<strong>
+<li>public String toString () 
+</strong>
+Method that returns a String with the current hand of cards, one card
+per line.
+<br>
+<strong>
+<li>public static void main (String [ ] args) 
+</strong>
+<br>
+Method used for testing the public methods in this class.
+<p>
+
+You may not have <strong>Any Other Public Items </strong> in your code.
+All other items must be private. 
+<hr>
+
+<h2>Running the Program</h2>
+We will use the   main() in your <strong>PokerGUI</strong> class. It must
+remain  
+like this:
+<pre>
+public static void main (String [] args) {
+
+PokerGUI gui = new PokerGUI();
+}
+</pre>
+Create the model inside the <strong>PokerGUI</strong> class like you
+did for program 3.
+<hr> 
+<h2>Extra Credit </h2>
+<P>Extra credit will be offered for assignments that are submitted
+early.  You will receive one points of extra credit for each full
+day early that you submit your program.  A maximum of 10 points of
+extra credit may be obtained.  We will examine the dates of the files
+in your submit locker to determine the amount of extra credit.  The
+file with the latest submission date will be the date we use to determine
+the extra credit.</P>
+<P>In order for you to receive extra credit you <B>MUST</B> submit
+a working program that meets the project specifications.  Programs
+which do not compile or deviate from the specifications will not
+receive extra credit.</P>
+<HR>
+<H2>Documentation Specifications</H2>
+<P>Each method, instance variable and class you write in
+JavaHtmlLine.java, JavaHtmlModel.java and JavaHtmlGui.java must be documented
+using the JavaDoc style of documentation.  Remember
+all JavaDoc starts with /** and ends with */. The course style
+guidelines contain information on using JavaDoc.</P>
+<P>Remember that when generating JavaDoc you must first document
+the description of the item (method, instance variable, or class) and then
+put your tags (@author, @param, and/or @version).  Good places to
+find JavaDoc examples include:
+<UL>
+        <LI>Class style guidelines (linked from syllabus)
+        <LI>All course sample code in the lectures (linked off each lecture)
+        <LI>Course textbook
+</UL>
+</P>
+<HR>
+<H2>Working on your program during lab</H2>
+<P>You are expected to work on your program after you have finished
+your lab. You are REQUIRED to work during the entire allocated
+lab time on your program, unless it is complete.</P>
+
+<P>While working in lab on your program, the <B>ONLY</B> person who
+you should consult for assistance is the lab instructor.  Working
+with other students on this program is strictly forbidden.</P>
+<P>You are expected to work on your code during lab.  You may not
+leave lab until a TA has cleared that your code is working and
+submitted and the lab for that session is working and submitted.</P>
+<p>
+We recommend the following  milestones:
+<li>GUI completed by Sunday April 11
+<li>Model completed by Sunday April 17
+<HR>
+<H2>Submitting Your Code</H2>
+
+<p>Before you submit your work, make sure the program:<BR>
+<ol>
+<li type="1">meets the <a href="http://courses.ncsu.edu/csc116/common/style_guid
+elines.pdf">style guidelines posted online</a> for the course  </b>
+<li type="1">behaves as specified in this document. You should test your
+code thoroughly. Be sure to know what results should displayed for
+each major scenario.
+<li type="1">Is thoroughly tested
+<li type="1">satisfies the <a href="gradesheet.html">
+gradesheet</a> for this assignment.
+</ol>
+</P>
+<P>You should submit your program through Wolfware Submit:</P>
+<BLOCKQUOTE>
+<a href="http://submit.ncsu.edu">
+http://submit.ncsu.edu</a>
+</blockquote>
+<P>The name of the assignment is <tt>Program_4</tt>. Submit
+your source code file, PokerGUI.java and
+PokerModel.java.
+only. Do not attempt to submit <tt><b>.class</b></tt> files.</P>
+<P><B>The electronic submission deadline is precise
+and does not allow for late work. Do not be late.</B> </P>
+<P>Count on the system going down and on other students looking
+for workstations the last day the assignment is due. Count on serious
+server delays because everyone is trying to access the submit software
+during the last few minutes the program is due.</P>
+<P>You are able to make multiple submissions of the same file
+(the later submissions overwrite the earlier ones with the same file name).
+
+To be on the safe side, start submitting your work as soon as you have
+completed a substantial portion.</P>
+<HR>
+<H2>Hard Copies (On Campus Sections Only)</H2>
+<P>When you turn in your program electronically,
+print off the <a href="gradesheet.html">grade sheet</a>
+and fill out the following information:<BR>
+<ul>
+<li>your name
+<li>your lab instructor's name
+<li>your lab section number
+</ul>
+</P>
+
+<P>Staple the <a href="gradesheet.html">grade sheet</a> to the
+top of your program source file listing and bring the entire packet to
+class on the lecture following the electronic submission deadline. I
+collect the packets at the <B>beginning</B> of class time.
+</P>  
+</body></html>
+ 

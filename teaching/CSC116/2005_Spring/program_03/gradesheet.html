@@ -1,0 +1,326 @@
+<html>
+
+<head>
+<title>Programming Assignment 3: Java to HTML Converter</title>
+</head>
+<body bgcolor="white" link="#006699" vlink="#006699" alink="#9999ff">
+<center><h2>Program 3: Java to HTML Converter</h2></center>
+<p>
+<hr>
+<table border="0">
+  <tr>
+    <td>Your name:</td>
+    <td colspan="3">___________________________________________</td>
+  </tr>
+  <tr>
+    <td>Lab instructor's name:</td>
+    <td>_____________________</td>
+    <td>Lab section number:</td>
+    <td>__________</td>
+  </tr>
+</table>
+<br>
+<table border="0">
+  <tr>
+    <td><strong>Your score</strong></td>
+    <td><strong>Max Score</strong></td>
+    <td><strong>Description</strong></td>
+  </tr>
+  <tr>
+    <td colspan="3"><hr>Program Model Functionality</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel Constructor</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Initializes all instance variables to correct initial value</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel setInputFilename</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Correctly sets value of instance variable</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Refuses null values without changing instance variable</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel getOutputFilename</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Correctly returns output file name that was generated</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Correctly removes .java extension and substitutes .html</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel getStatus</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Handles input file error</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Handles output file error</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Handles file closing error</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Provides correct line count during good translation</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel translate</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Handles file input correctly</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Handles file output correctly</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Reads each line correctly</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Prepends two beginning lines to the file correctly</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Appends two ending lines to the file correctly</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlModel main method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Model tested in the main method</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlLine setLine method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Correctly sets value of instance variable</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Refuses null values without changing instance variable</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlLine getLine method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Retrieves instance variable correctly</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlLine getHtmlLine method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly translates space at the start of the line to &amp;nbsp;</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly translates tab at the start of the line to &amp;nbsp;</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly translates &amp; to &amp;amp;</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly translates &lt; to &amp;lt;</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly translates &gt; to &amp;gt;</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Correctly appends &lt;BR&gt; to the end of the line</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+4 pts</td>
+    <td>Does not corrupt any other portions of the line</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlLine main method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>JavaHtmlLine tested in the main method</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>60 pts</td>
+    <td><B>Program model subtotal</B> <I>(0 if program fails to compile)</I></td>
+  </tr>
+  <tr>
+    <td colspan="3"><hr>Program GUI Functionality</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlGui Constructor</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+10 pts</td>
+    <td>GUI properly sets up display</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlGui actionPerformed method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+5 pts</td>
+    <td>Pressing the button properly updates file and status</td>
+  </tr>
+  <tr><td></td><td></td>
+    <td><B>JavaHtmlGui main method</B></td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+5 pts</td>
+    <td>Main method creates a GUI and displays it properly</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>20 pts</td>
+    <td><B>Program GUI subtotal</B> <I>(0 if program fails to compile)</I></td>
+  </tr>
+  <tr>
+    <td colspan="3"><hr>Grading Test Cases</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Grading Test Case 1</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Grading Test Case 2</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Grading Test Case 3</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Grading Test Case 4</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+2 pts</td>
+    <td>Grading Test Case 5</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>10 pts</td>
+    <td><B>Testing subtotal</B> <I>(0 if program fails to compile)</I></td>
+  </tr>
+  <tr>
+    <td colspan="3"><hr>JavaDoc</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Complete JavaDoc for JavaHtmlModel class</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+4 pts</td>
+    <td>Complete JavaDoc for JavaHtmlLine class</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>+3 pts</td>
+    <td>Complete JavaDoc for JavaHtmlGui class</td>
+  </tr>
+  <tr>
+    <td>__________</td>
+    <td>10 pts</td>
+    <td><B>JavaDoc subtotal</B></td>
+  </tr>
+  <tr><td colspan="3"><hr></td></tr>
+  <tr>
+    <td>__________</td>
+    <td>10 pts</td>
+    <td><B>Extra Credit (1 points per day early)</B></td>
+  </tr>
+</table>
+<table border="0" cellpadding="3" cellspacing="0">
+  <tr>
+    <td><b><hr>Limitations</b></td>
+  </tr>
+  <tr>
+    <td><dl>
+      <dd>0&nbsp;&nbsp;&nbsp;&nbsp;Max grade if program is submitted late<br>
+         10&nbsp;&nbsp;Max grade if code contains any extra public items<br>
+         10&nbsp;&nbsp;Max grade if public method signature wrong<br>
+         10&nbsp;&nbsp;Max grade if code does not compile (no points for Program functionality awarded)<br>
+         90&nbsp;&nbsp;Max grade if hard copy not submitted (On Campus Students)<br>
+    </dl></td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <table border="0">
+        <tr>
+          <td>__________</td>
+	  <td></td>
+	</tr>
+      </table>
+     </td>
+     <td><b>GRADE</b></td>
+  </tr>
+</table>
+<hr>
+Print this page and turn it in with a printed copy of
+<tt>JavaHtmlModel.java</tt>, <tt>JavaHtmlWords.java</tt>
+and <tt>JavaHtmlGui.java</tt>.
+</body>
+
+</html>

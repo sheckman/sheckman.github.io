@@ -1,0 +1,4 @@
+This is a simple test which should be your 1st test
+of the Pig Latin program.  The output should be that
+the program translated 32 out of a total of 35 
+words to pig latin.

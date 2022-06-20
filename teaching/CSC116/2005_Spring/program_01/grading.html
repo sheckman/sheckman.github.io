@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+<TITLE>Computer Science 116: Introduction to Java</TITLE>
+<LINK REL="stylesheet" HREF="../csc116.css" TYPE="text/css">
+</HEAD>
+<SCRIPT LANGUAGE="javascript">
+  var onText = new Array();
+    onText[0] = new Image;
+    onText[0].src = "../images/calendar-on.gif";
+    onText[1] = new Image;
+    onText[1].src = "../images/syllabus-on.gif";
+    onText[2] = new Image;
+    onText[2].src = "../images/readings-on.gif";
+    onText[3] = new Image;
+    onText[3].src = "../images/labs-on.gif";
+    onText[4] = new Image;
+    onText[4].src = "../images/notes-on.gif";
+    onText[5] = new Image;
+    onText[5].src = "../images/programs-on.gif";
+    onText[6] = new Image;
+    onText[6].src = "../images/submit-on.gif";
+    onText[7] = new Image;
+    onText[7].src = "../images/home-on.gif";
+    onText[8] = new Image;
+    onText[8].src = "../images/grades-on.gif";
+    onText[9] = new Image;
+    onText[9].src = "../images/msgboard-on.gif";
+  var offText = new Array();
+    offText[0] = new Image;
+    offText[0].src = "../images/calendar-off.gif";
+    offText[1] = new Image;
+    offText[1].src = "../images/syllabus-off.gif";
+    offText[2] = new Image;
+    offText[2].src = "../images/readings-off.gif";
+    offText[3] = new Image;
+    offText[3].src = "../images/labs-off.gif";
+    offText[4] = new Image;
+    offText[4].src = "../images/notes-off.gif";
+    offText[5] = new Image;
+    offText[5].src = "../images/programs-off.gif";
+    offText[6] = new Image;
+    offText[6].src = "../images/submit-off.gif";
+    offText[7] = new Image;
+    offText[7].src = "../images/home-off.gif";
+    offText[8] = new Image;
+    offText[8].src = "../images/grades-off.gif";
+    offText[9] = new Image;
+    offText[9].src = "../images/msgboard-off.gif";
+
+  function floatOver(k) {
+    eval("document.text"+k+".src = onText[k].src");
+  }
+  function floatOff(d) {
+    eval("document.text"+d+".src = offText[d].src")
+  }
+
+</SCRIPT>
+
+<BODY>
+<TABLE BORDER = 0 WIDTH=100% ID=bannerbar>
+<TR><TD COLSPAN=2 ALIGN=RIGHT><IMG SRC="../images/javalogo.jpg" WIDTH="461" HEIGHT="98"></TD></TR>
+</TABLE>
+
+<TABLE>
+<TR><TD WIDTH=10% VALIGN=TOP ID=menubar>
+<TABLE BORDER=0 WIDTH=100% ><TR><TD WIDTH=100% VALIGN=TOP>
+<A onMouseOver="floatOver(7);window.status='View course home page';return true"; onMouseOut=floatOff(7); HREF = "../index.html"><IMG SRC = "../images/home-off.gif" NAME = "text7" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(0);window.status='View calendar of events';return true"; onMouseOut=floatOff(0); HREF = "../calendar.html"> <IMG SRC = "../images/calendar-off.gif" NAME = "text0" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(1);window.status='View course syllabus';return true"; onMouseOut=floatOff(1); HREF = "../syllabus.html"><IMG SRC = "../images/syllabus-off.gif" NAME = "text1" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(2);window.status='View reading assignments';return true"; onMouseOut=floatOff(2); HREF = "../readings.html"><IMG SRC = "../images/readings-off.gif" NAME = "text2" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(3);window.status='View lab assignments';return true"; onMouseOut=floatOff(3); HREF = "../labs.html"><IMG SRC = "../images/labs-off.gif" NAME = "text3" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(4);window.status='View course lecture notes';return true"; onMouseOut=floatOff(4); HREF = "../notes.html"><IMG SRC = "../images/notes-off.gif" NAME = "text4" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(5);window.status='View programming assignments';return true"; onMouseOut=floatOff(5); HREF = "../programs.html"><IMG SRC = "../images/programs-off.gif" NAME = "text5" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(8);window.status='View grades';return true"; onMouseOut=floatOff(8); HREF = "../grades.html"><IMG SRC = "../images/grades-off.gif" NAME = "text8" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(9);window.status='Visit Message Board';return true"; onMouseOut=floatOff(9); HREF = "../msgboard.html"><IMG SRC = "../images/msgboard-off.gif" NAME = "text9" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(6);window.status='Submit completed assignments';return true"; onMouseOut=floatOff(6); HREF = "http://submit.ncsu.edu"><IMG SRC = "../images/submit-off.gif" NAME = "text6" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+</TD></TR></TABLE></TD>
+<TD VALIGN=TOP ALIGN=LEFT ID="infoblock" WIDTH="*">
+<h1>Program 1 Grading Guidelines: Pizza Parlour </h1>
+<HR>
+<H2>Program Functionality</H2>
+<HR WIDTH=50%>
+<P>
+The first test of functionality is to run the grader.  If the
+code passes the grader then you can assume all points are to be
+awarded. If the code fails one or more tests for a method you
+should check the following.
+</P>
+<P>
+First make sure the student is getting the input values from
+the parameters.  Some students will mistakenly use the wrong
+inputs.  If the math is correct but the wrong input is used 
+only deduct the 4 points for use of the parameters.
+</P>
+<P>
+Second make sure the student is performing the math correctly.
+Regardless of the output format or the correct use of parameters
+the student could be doing the correct math.  If the math is
+wrong deduct all 10 points.
+</P>
+<P>
+Finally check the output wording and format.  If the output contains
+the wrong words or punctuation deduct 2 points.  Again it is possible
+for the correct math and parameter use to result in the wrong output.
+</P>
+<P>
+If you have any questions regarding grading contact one of the lecture
+TAs or administrators for assistance.  Generally a single error in a 
+method should result in one deduction.
+</P>
+<HR>
+<H2>Testing</H2>
+<HR WIDTH=50%>
+<P>
+The student should have included two additional test cases
+in the main method which each test every method.  The student
+should receive 1/2 point for each method being tested a single
+time.  
+</P>
+<P>
+The test cases should receive credit only if they are unique
+inputs for the method.  If the student uses the same inputs 
+for all tests of a method then no credit should be given for
+duplicate cases.
+</P>
+<HR>
+<H2>JavaDoc</H2>
+<HR WIDTH=50%>
+<P>
+JavaDoc in the program should meet the course style guidelines.
+Each subsection should receive all or none of the points on 
+the gradesheet.  You should clearly document on the student's 
+hard copy the correct way to perform JavaDoc if any points are
+deducted.
+</P>
+<P>
+For each method the student must have included documentation for 
+the method and have documented each parameter in the JavaDoc.  If
+the JavaDoc is missing the method description or has the wrong 
+format then grade should be 0/1 for the method description.
+</P>
+<P>
+If the @param tags are missing or incorrect in format 0/1 should
+be awarded for the parameter description for the method.
+</P>
+<P>
+The class description requires that the student have correctly
+formatted JavaDoc for the class to receive the 3 points.  The
+@version tag is worth 1 point and the @author tag is worth 1 point.
+</P>
+<HR>
+<H2>Limitations</H2>
+<HR WIDTH=50%>
+<P>
+If the program fails to compile without modification the code can
+ONLY earn points for having functional test cases and JavaDoc.  You
+still must grade those two section by hand.  
+</P>
+<HR>
+</TD>
+</TABLE>
+</BODY>
+</HTML>

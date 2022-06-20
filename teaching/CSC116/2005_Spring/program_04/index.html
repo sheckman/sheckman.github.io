@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+<TITLE>Computer Science 116: Introduction to Java</TITLE>
+<LINK REL="stylesheet" HREF="../csc116.css" TYPE="text/css">
+</HEAD>
+<SCRIPT LANGUAGE="javascript">
+  var onText = new Array();
+    onText[0] = new Image;
+    onText[0].src = "../images/calendar-on.gif";
+    onText[1] = new Image;
+    onText[1].src = "../images/syllabus-on.gif";
+    onText[2] = new Image;
+    onText[2].src = "../images/readings-on.gif";
+    onText[3] = new Image;
+    onText[3].src = "../images/labs-on.gif";
+    onText[4] = new Image;
+    onText[4].src = "../images/notes-on.gif";
+    onText[5] = new Image;
+    onText[5].src = "../images/programs-on.gif";
+    onText[6] = new Image;
+    onText[6].src = "../images/submit-on.gif";
+    onText[7] = new Image;
+    onText[7].src = "../images/home-on.gif";
+    onText[8] = new Image;
+    onText[8].src = "../images/grades-on.gif";
+    onText[9] = new Image;
+    onText[9].src = "../images/msgboard-on.gif";
+  var offText = new Array();
+    offText[0] = new Image;
+    offText[0].src = "../images/calendar-off.gif";
+    offText[1] = new Image;
+    offText[1].src = "../images/syllabus-off.gif";
+    offText[2] = new Image;
+    offText[2].src = "../images/readings-off.gif";
+    offText[3] = new Image;
+    offText[3].src = "../images/labs-off.gif";
+    offText[4] = new Image;
+    offText[4].src = "../images/notes-off.gif";
+    offText[5] = new Image;
+    offText[5].src = "../images/programs-off.gif";
+    offText[6] = new Image;
+    offText[6].src = "../images/submit-off.gif";
+    offText[7] = new Image;
+    offText[7].src = "../images/home-off.gif";
+    offText[8] = new Image;
+    offText[8].src = "../images/grades-off.gif";
+    offText[9] = new Image;
+    offText[9].src = "../images/msgboard-off.gif";
+
+  function floatOver(k) {
+    eval("document.text"+k+".src = onText[k].src");
+  }
+  function floatOff(d) {
+    eval("document.text"+d+".src = offText[d].src")
+  }
+
+</SCRIPT>
+
+<BODY>
+<TABLE BORDER = 0 WIDTH=100% ID=bannerbar>
+<TR><TD COLSPAN=2 ALIGN=RIGHT><IMG SRC="../images/javalogo.jpg" WIDTH="461" HEIGHT="98"></TD></TR>
+</TABLE>
+
+<TABLE>
+<TR><TD WIDTH=10% VALIGN=TOP ID=menubar>
+<TABLE BORDER=0 WIDTH=100% ><TR><TD WIDTH=100% VALIGN=TOP>
+<A onMouseOver="floatOver(7);window.status='View course home page';return true"; onMouseOut=floatOff(7); HREF = "../index.html"><IMG SRC = "../images/home-off.gif" NAME = "text7" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(0);window.status='View calendar of events';return true"; onMouseOut=floatOff(0); HREF = "../calendar.html"> <IMG SRC = "../images/calendar-off.gif" NAME = "text0" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(1);window.status='View course syllabus';return true"; onMouseOut=floatOff(1); HREF = "../syllabus.html"><IMG SRC = "../images/syllabus-off.gif" NAME = "text1" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(2);window.status='View reading assignments';return true"; onMouseOut=floatOff(2); HREF = "../readings.html"><IMG SRC = "../images/readings-off.gif" NAME = "text2" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(3);window.status='View lab assignments';return true"; onMouseOut=floatOff(3); HREF = "../labs.html"><IMG SRC = "../images/labs-off.gif" NAME = "text3" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(4);window.status='View course lecture notes';return true"; onMouseOut=floatOff(4); HREF = "../notes.html"><IMG SRC = "../images/notes-off.gif" NAME = "text4" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(5);window.status='View programming assignments';return true"; onMouseOut=floatOff(5); HREF = "../programs.html"><IMG SRC = "../images/programs-off.gif" NAME = "text5" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(8);window.status='View grades';return true"; onMouseOut=floatOff(8); HREF = "../grades.html"><IMG SRC = "../images/grades-off.gif" NAME = "text8" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(9);window.status='Visit Message Board';return true"; onMouseOut=floatOff(9); HREF = "../msgboard.html"><IMG SRC = "../images/msgboard-off.gif" NAME = "text9" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+<A onMouseOver="floatOver(6);window.status='Submit completed assignments';return true"; onMouseOut=floatOff(6); HREF = "http://submit.ncsu.edu"><IMG SRC = "../images/submit-off.gif" NAME = "text6" BORDER = 0 WIDTH="200" HEIGHT="50"></A><BR>
+</TD></TR></TABLE></TD>
+<TD VALIGN=TOP ALIGN=LEFT ID="infoblock" WIDTH="*">
+
+<H1>Program 4: Pig Latin</H1> 
+<H2>Submit date:  Sunday, 21 November 2004 at 11:55 p.m.</H2>
+
+<hr>
+<H2>Software Overview</H2>
+<P>The software you are writing is a Pig Latin translator.  Pig
+Latin in this assignment will adhere to a set of simple rules:
+<OL>
+<LI>All words that can be translated must be at least one letter long 
+and can only contain letters.  All valid words will contain at 
+least one vowel.
+<LI>Words that start with a vowel (A,E,I,O,U) simply have "WAY" appended to the end
+<LI>Words that have only Y as a vowel (by, my, try) simply have AY appended to the end
+<LI>Words that start with a consonant have all consonant letters up to the first vowel moved to the end of the word and AY appended.  You never be given a word with no vowels.
+</OL>
+</P>
+
+<P>The software will remove the question marks, periods, and exclamation
+points from the input.  All output will be strictly in lowercase.  Words
+will be considered any group of characters which end in either:
+<UL>
+<LI>A space
+<LI>The end of a line
+<LI>A period
+<LI>An exclamation point
+<LI>A question mark
+</UL>
+Your program must break each sentence into words and count
+each item as a word.  Some of the words can be translated 
+into Pig Latin while others can not.  Words which can be 
+translated must contain only upper and lower case letters.
+Words which contain numbers and non-punctuation characters
+should not be translated.
+</P>
+
+<P>The Pig Latin program will read all of the input from a text
+file and output the results to a text file.  The GUI will display
+the status of the operation.  The outputs which the GUI can display
+include:
+<UL>
+	<LI>Unable to open input file!
+	<LI>Unable to open output file!
+</UL>
+If either of these two conditions occur you should close any
+open files and not perform any translation.  The application
+can also encounter errors during or after the translation.
+These include:
+<UL>
+	<LI>Error during translation!
+	<LI>Error closing files!
+</UL>
+All, some or none of these errors may occur.  If any of these
+errors occur then they should be displayed and no other status
+should be displayed.  All of these errors will be caused by
+an IOException, which is the only exception type you need to 
+check for in the application.
+</P>
+<P>If the input is read, translated to pig latin, and output 
+with no errors then the message "Translated ?? out of a total
+of ?? words to pig latin."  The count of input words should be
+include all words in the file.  The count of translated words
+should include only words with all letters that could be changed
+to Pig Latin.</P>
+<P>The GUI should be identical to the GUI in the sample application.
+The application must include several major elements.
+The items include a label for the
+input file name, the JTextArea for input file name,
+output file name, the JTextArea for output file name,
+a label for the status, the JTextArea for status, and a JButton.
+The user will input the input and output file names 
+in the text boxes and press the "Go" button to update
+the status.  The status area will show either an error message
+or the output the statistics.</P>
+<P>The model will include setInputFilename and 
+setOutputFilename methods which will be
+used by the GUI to update the file names.  It will also include
+a getStatus method which will generate a String and return
+it to be displayed in the GUI.</P>
+<HR>
+<H2>Requirements </H2>
+<P>Your program must create the class PigLatinWords and implement
+the following public methods:
+<DL>
+	<DT>public PigLatinWords()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must set the initial value of
+	totalCount and the pig words to zero.</DD>
+	<DT>public void setWord(String)</DT>
+	<DD>Method, which will accept a single String as a parameter
+	and set the value of the input word to that String.  This
+	method should NOT change the value of the input word if it
+	is provided a null value.  If the word is non-null then
+	the total word count should be incremented.  Once the word
+	is set then it should be translated to pig latin.  If the
+	word can be translated the translated counter should be
+	incremented.</DD>
+	<DT>public String getWord()</DT>
+	<DD>This will return the value of the instance variable
+	in the original form.</DD>
+	<DT>public String getPigWord()</DT>
+	<DD>This retrieves the Pig Latin version of the word.  If
+	the word could not be translated this should retrieve
+	the original word.</DD>
+	<DT>public int getTotalCount()</DT>
+	<DD>This retrieves the current count of words which have
+	been set.</DD>
+	<DT>public int getPigCount()</DT>
+	<DD>This retrieves the current count of words which have
+	been translated.</DD>
+	<DT>public int getNonPigCount()</DT>
+	<DD>This retrieves the difference between the total count
+	and the translated count.  This is the number of words
+	not translated.</DD>
+	<DT>public static void main(String[] args)</DT>
+	<DD>Main method which should contain your test code to
+	show you have tested your model.  This will prove your
+	code has been tested and is a REQUIRED method.</DD>
+</DL>
+</P>
+<P>Your program must create the class PigLatinModel and implement
+the following public methods:
+<DL>
+	<DT>public PigLatinModel()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must set the initial value of
+	the input file name to input.txt, the output file name
+	to output.txt, and the status to "None".</DD>
+	<DT>public void setInputFilename(String)</DT>
+	<DD>Method, which will accept a single String as a parameter
+	and set the value of the input file to that String.  This
+	method should NOT change the value of the input file
+	if it is provided a null value.</DD>
+	<DT>public void setOutputFilename(String)</DT>
+	<DD>Method, which will accept a single String as a parameter
+	and set the value of the output file to that String.  This
+	method should NOT change the value of the output file
+	if it is provided a null value.</DD>
+	<DT>public String getStatus()</DT>
+	<DD>Method, which will return either an error String
+	or the status of the translation a single String.</DD>
+	<DT>public void translate()</DT>
+	<DD>This method will perform the actual translation from
+	the input to the output file.  The actual opening, processing
+	and closing of the files will occur here.  This is also 
+	where the individual lines will be broken into words.</DD>
+	<DT>public static void main(String[] args)</DT>
+	<DD>Main method which should contain your test code to
+	show you have tested your model.  This will prove your
+	code has been tested and is a REQUIRED method.</DD>
+</DL>
+</P>
+<P>Your program must create the class PigLatinGUI and implement
+the following public methods:
+<DL>
+	<DT>public PigLatinGUI()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must create the GUI and set
+	it up.</DD>
+	<DT>public void actionPerformed (ActionEvent)</DT>
+	<DD>This method is required to handle the actions 
+	generated from the button.</DD>
+	<DT>public void main(String[])</DT>
+	<DD>This method must be exactly as given below:<BR>
+<CODE><BR>
+&nbsp;&nbsp;public static void main (String args[]) {<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;PigLatinGUI myGUI = new PigLatinGUI();<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;myGUI.show();<BR>
+&nbsp;&nbsp;}<BR>
+</CODE>
+</DD>
+</DL>
+<P>You may not have <B>ANY OTHER PUBLIC ITEMS</B> in your code.
+All other items must be private.  Your code must run with the 
+given main method and must meet the specifications below.</P>
+<HR>
+<H2>GUI Specification</H2>
+<P>The input JTextAreas should be a single line tall and allow
+the user to input a value.  It will be preceded by a single
+JLabel describing the input areas.</P>
+<P>The output JTextArea should be 10 lines tall and be inside
+a JScrollPane.  The JTextArea should have scrolling enabled
+and should not allow the user to edit the area.  The code below
+is a demonstration of how to setup the JTextArea:<BR>
+<CODE><BR>
+JTextArea output = new JTextArea(10,40); //Create the text area<BR>
+output.setEditable(false); //Do not allow the user to edit<BR>
+output.setLineWrap(true); //Allow the lines to wrap<BR>
+output.setWrapStyleWord(true); //Wrap at the white spaces<BR>
+JScrollPane outputScroll = new JScrollPane(output); //Let the text area scroll<BR>
+</CODE>
+<BR>
+These items require javax.swing.* and java.awt.* be imported.</P>
+<P>The GUI must implement the actionPerformed method.  The only
+item which should trigger this method to run is the user pressing
+the "Go" button.  The pressing of the "Go" button should be used
+to run the translation in the model and then to update the
+status display.</P>
+<P>Remember that in order for the GUI to use the model object
+you must create a local variable of type PigLatinModel
+inside the GUI.</P>
+<P>
+<HR>
+<H2>Sample Items and Pregrading</H2>
+<P>There is NO formal pregrading available for this program.  Instead
+we offer you two other options for you to evaluate your own code.  You
+can download to jar files:
+<UL>
+	<LI><A HREF="PigLatin.jar">Pig Latin sample program</A>
+	<LI><A HREF="PigLatinGrader.jar">Pig Latin Grader</A>
+</UL>
+To run the sample program you should download the jar and type
+"java -jar PigLatin.jar".  This will allow you to run the full
+program.  Do not attempt to use the code from this program in
+your own work in any way.</P>
+<P>The grader program will verify that all three of your class
+files meet the program specifications.  To use this you should
+place the jar in the same directory with your compiled, working
+program and run "java -jar PigLatinGrader.jar all".  This will
+test all three of your classes to ensure the public items in the
+class meet our requirements.  <B>THIS IS ONLY TESTING THE
+METHODS MEET THE PROGRAM SPEC!!! YOU MUST TEST THE FUNCTIONALITY
+YOURSELF.</B></P>
+<P>We have also included a sample input <A HREF="test.txt">test.txt</A>
+and a sample output <A HREF="result.txt">result.txt</A> which you
+may view to compare to your output.</P>
+<P><A HREF="javadoc">Click here</A> to view a sample of the JavaDoc
+from the answer key.  You should reference this in the design of 
+your program to make sure you are using the correct method signatures.
+</P>
+<HR>
+<H2>Extra Credit</H2>
+<P>Extra credit will be offered for assignments that are submitted
+early.  You will receive 2 points of extra credit for each full 
+day early that you submit your program.  A maximum of 20 points of
+extra credit may be obtained.  We will examine the dates of the files
+in your submit locker to determine the amount of extra credit.  The
+file with the latest submission date will be the date we use to determine
+the extra credit.</P>
+<P>In order for you to receive extra credit you <B>MUST</B> submit
+a working program that meets the project specifications.  Programs
+which do not compile or deviate from the specifications will not
+receive extra credit.</P>
+<HR>
+<H2>Documentation Specifications</H2>
+<P>Each method, instance variable and class you write in 
+PigLatinWords.java, PigLatinModel.java and PigLatinGUI.java must be documented
+using the JavaDoc style of documentation.  Remember 
+all JavaDoc starts with /** and ends with */. The course style
+guidelines contain information on using JavaDoc.</P> 
+<P>Remember that when generating JavaDoc you must first document
+the description of the item (method, instance variable, or class) and then
+put your tags (@author, @param, and/or @version).  Good places to
+find JavaDoc examples include:
+<UL>
+	<LI>Class style guidelines (linked from syllabus)
+	<LI>All course sample code in the lectures (linked off each lecture)
+	<LI>Course textbook
+</UL>
+</P>
+<HR>
+<H2>Working on your program during lab</H2>
+
+<P>Part of two sessions of lab have been set-aside for you to work on 
+your program.  You are REQUIRED to work during the entire allocated
+lab time on your program, unless it is complete.</P>
+
+<P>While working in lab on your program, the <B>ONLY</B> person who
+you should consult for assistance is the lab instructor.  Working
+with other students on this program is strictly forbidden.</P>
+<P>You are expected to work on your code during lab.  You may not
+leave lab until a TA has cleared that your code is working and
+submitted and the lab for that session is working and submitted.</P>
+
+<HR>
+<H2>Submitting Your Code</H2>
+
+<p>Before you submit your work, make sure the program:<BR>
+<ol>
+<li type="1">meets the <a href="http://courses.ncsu.edu/csc116/common/style_guidelines.pdf">style guidelines posted online</a> for the course  </b> 
+<li type="1">behaves as specified in this document. You should test your
+code thoroughly. Be sure to know what results should displayed for
+each major scenario.
+<li type="1">Is thoroughly tested
+<li type="1">satisfies the <a href="gradesheet.html">
+gradesheet</a> for this assignment.
+</ol>
+</P>
+<P>You should submit your program through Wolfware Submit:</P>
+<BLOCKQUOTE>
+<a href="http://submit.ncsu.edu">
+http://submit.ncsu.edu</a>
+</blockquote>
+<P>The name of the assignment is <tt>Program4</tt>. Submit
+your source code file, PigLatinWords.java, 
+PigLatinModel.java and PigLatinGUI.java
+only. Do not attempt to submit <tt><b>.class</b></tt> files.</P>
+<P><B>The electronic submission deadline is precise 
+and does not allow for late work. Do not be late.</B> </P>
+<P>Count on the system going down and on other students looking
+for workstations the last day the assignment is due. Count on serious
+server delays because everyone is trying to access the submit software
+during the last few minutes the program is due.</P>
+<P>You are able to make multiple submissions of the same file 
+(the later submissions overwrite the earlier ones with the same file name). 
+To be on the safe side, start submitting your work as soon as you have 
+completed a substantial portion.</P>
+<HR>
+<H2>Hard Copies (On Campus Sections Only)</H2>
+<P>When you turn in your program electronically, 
+print off the <a href="gradesheet.html">grade sheet</a>
+and fill out the following information:<BR>
+<ul>
+<li>your name
+<li>your lab instructor's name
+<li>your lab section number
+</ul>
+</P>
+
+<P>Staple the <a href="gradesheet.html">grade sheet</a> to the
+top of your program source file listing and bring the entire packet to
+class on the lecture following the electronic submission deadline. I
+collect the packets at the <B>beginning</B> of class time.
+</P>
+<HR>
+</TD>
+</TABLE>
+</BODY>
+</HTML>

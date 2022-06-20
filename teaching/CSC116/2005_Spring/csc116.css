@@ -1,0 +1,16 @@
+.nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+.body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 36px;
+}
+.src_code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+}

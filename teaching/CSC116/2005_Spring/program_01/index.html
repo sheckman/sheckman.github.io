@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+<TITLE>Computer Science 116: Introduction to Java</TITLE>
+<LINK REL="stylesheet" HREF="../csc116.css" TYPE="text/css">
+</HEAD>
+<SCRIPT LANGUAGE="javascript">
+  var onText = new Array();
+    onText[0] = new Image;
+    onText[0].src = "../images/calendar-on.gif";
+    onText[1] = new Image;
+    onText[1].src = "../images/syllabus-on.gif";
+    onText[2] = new Image;
+    onText[2].src = "../images/readings-on.gif";
+    onText[3] = new Image;
+    onText[3].src = "../images/labs-on.gif";
+    onText[4] = new Image;
+    onText[4].src = "../images/notes-on.gif";
+    onText[5] = new Image;
+    onText[5].src = "../images/programs-on.gif";
+    onText[6] = new Image;
+    onText[6].src = "../images/submit-on.gif";
+    onText[7] = new Image;
+    onText[7].src = "../images/home-on.gif";
+    onText[8] = new Image;
+    onText[8].src = "../images/grades-on.gif";
+    onText[9] = new Image;
+    onText[9].src = "../images/msgboard-on.gif";
+  var offText = new Array();
+    offText[0] = new Image;
+    offText[0].src = "../images/calendar-off.gif";
+    offText[1] = new Image;
+    offText[1].src = "../images/syllabus-off.gif";
+    offText[2] = new Image;
+    offText[2].src = "../images/readings-off.gif";
+    offText[3] = new Image;
+    offText[3].src = "../images/labs-off.gif";
+    offText[4] = new Image;
+    offText[4].src = "../images/notes-off.gif";
+    offText[5] = new Image;
+    offText[5].src = "../images/programs-off.gif";
+    offText[6] = new Image;
+    offText[6].src = "../images/submit-off.gif";
+    offText[7] = new Image;
+    offText[7].src = "../images/home-off.gif";
+    offText[8] = new Image;
+    offText[8].src = "../images/grades-off.gif";
+    offText[9] = new Image;
+    offText[9].src = "../images/msgboard-off.gif";
+
+  function floatOver(k) {
+    eval("document.text"+k+".src = onText[k].src");
+  }
+  function floatOff(d) {
+    eval("document.text"+d+".src = offText[d].src")
+  }
+
+</SCRIPT>
+
+<BODY class="body">
+<h1 class="title">Program 1: Pizza Parlour </h1>
+<H2 class="nav">Submit date: Sunday, 13 February 2005 at 11:55 p.m. </H2>
+<P class="body">You are designing a system to assist a pizza parlour in calculating the cost and profit of doing business. In order to accomplish your goal you must calculate the cost of the base pizza, the toppings and of delivery.</P>
+<P class="body">You will write a total of four methods to calculate the cost of the pizza. You will write findBaseCost, findToppingCost and findDeliveryCost which will each calculate a portion of the cost. The method findAllCost will run the three methods findBaseCost, findToppingCost and findDeliveryCost.</P>
+<P class="body">You will write a single method, findProfitMargin, to calculate the profit margin of selling a pizza.</P>
+<P class="body">The software overview below will describe the math required in the assignment and will show the EXACT output you must display for a sample input. <B>You must output the String with the EXACT same words and punctuation as the examples shown below.</B> The only thing that should differ in the String are the numeric values depending on the input to the method.</P>
+<P class="body">You must use NumberFormat objects to format all decimal output from your program. Monetary output values should display with a dollar sign and in the traditional dollar and cent format. All other decimal values should display with a single decimal value.</P>
+<P class="body">Your code should be added to the given <A HREF="PizzaParlour.java"> PizzaParlour.java</A> file. The file already contains all five empty methods and a sample main method. You should <B>ONLY</B> add code inside of the given methods. You do not need to add any instance variables or additional methods. The program will not require any conditional logic to complete. You must document the five methods in the JavaDoc style.</P>
+<P class="body">As a final step you need to write two additional test cases. Your test cases should test each method individually, similar to the test case given in the main method. The two additional test cases should be added to the main method below the given test case.</P>
+<HR>
+<H2 class="nav">Software Overview</H2>
+<hr>
+<H2 class="nav">Requirements </H2>
+Requirements answer the question <b>what needs to be done</b>.
+<hr width=50%>
+<h3>Find Base Cost</h3>
+<P>To find the base cost of the pizza you will receive the diameter of the pizza to be made in inches. The base cost for the pizza is $0.05 per square inch of pizza. You should calculate the base cost of the pizza and then output it in the format given below:
+<P class="src_code">The base cost of a pizza with a diameter of 12 inches is $5.65
+<p></P>
+<hr width=50%>
+<h3>Find Topping Cost</h3>
+<P> To find the cost of the toppings on a pizza you must know the number toppings and the size of the pizza in square inches. The cost of adding a single topping is $0.01 per square inch. You will be provided the number of toppings to add and the size of the pizza as the diameter in whole inches. The output should be in the format given below: <BR>
+  <BR>
+  <span class="src_code">The cost of adding 2 toppings to a 12 inch diameter pizza is $2.26
+  </span>
+<p></P>
+<hr width=50%>
+<h3>Find Delivery Cost</h3>
+<P>To find the delivery cost of the pizza you must know the distance to deliver the pizza. The delivery will be made in a car which has a fuel efficiency of 54 miles per gallon. The cost of gas is $1.89 per gallon.</P>
+<P>You will be given the number of miles to the delivery site as a decimal number. You need to calculate the cost of the round-trip in dollars. The output should be in the format given below:
+<P class="src_code"> The round-trip cost of delivery for a destination 10.6 miles away is $0.74
+<p></P>
+<hr width=50%>
+<h3>Find All Cost</h3>
+<P> This method will be provided the diameter of the pizza as an integer, the number of toppings as an integer, and the number of miles to the delivery site in miles as a decimal value.</P>
+<P> The method will call the findBaseCost, findToppingCost and findDeliveryCost methods and display their output in order. The output should be in the format given below:
+<PRE class="src_code">
+The base cost of a pizza with a diameter of 12 inches is $5.65
+The cost of adding 2 toppings to a 12 inch diameter pizza is $2.26
+The round-trip cost of delivery for a destination 10.6 miles away is $0.74
+</PRE>
+<p></P>
+<hr width=50%>
+<h3>Find Profit Margin</h3>
+<P>The last thing the pizza parlour needs to know is the profit margin of producing the pizza. You will be given the cost to produce the pizza as a double value. You will also be given the price charged for the pizza as a double value.</P>
+<P>You must find the portion of the price which is profit and use that to find what percent of the price is profit. That is considered the profit margin. You should express the percent as a double value.</P>
+<P>A pizza will never be sold for the price of $0.00 or for a price less than the cost of making the pizza.
+<P class="src_code"> The profit margin in selling a pizza which cost $8.66 for $14.99 is 42.2%
+<p></P>
+<HR>
+<H2>Checking your program</H2>
+<P>The included jar file <A HREF="PizzaParlourGrader.jar"> PizzaParlourGrader.jar</A> can be used to check your program. It is able to check two of the requirements of the program. It can determine if the class file meets the specifications given in the assignment. The second thing the grader can check for is to make sure that your code outputs the correct values for each method. </P>
+<P>Download the jar file and type:<PRE class="src_code">java -jar PizzaParlourGrader.jar all</PRE>
+at the command prompt.
+<HR>
+<H2>Documentation Specifications</H2>
+<P>Each method and class you write in PizzaParlour.java must be documented using the JavaDoc style of documentation. Remember all JavaDoc starts with /** and ends with */. The course style guidelines contain information on using JavaDoc.</P>
+<P>Remember that when generating JavaDoc you must first document the description of the item (method or class in this case) and then put your tags (@author, @param, and/or @version). Good places to find JavaDoc examples include:
+<UL>
+  <LI>Class style guidelines (linked from syllabus)
+  <LI>All course sample code in the lectures (linked off each lecture)
+  <LI>Course textbook
+</UL>
+<p></P>
+<HR>
+<H2>Working on your program during lab (On Campus Sections Only)</H2>
+<P>While working in lab on your program, the <B>ONLY</B> person who you should consult for assistance is the lab instructor. Working with other students on this program is strictly forbidden.</P>
+<P>You are expected to work on your code during lab. You may not leave lab until a TA has cleared that your code is working and submitted and the lab for that session is working and submitted.</P>
+<HR>
+<H2>Submitting Your Code</H2>
+<p>Before you submit your work, make sure the program:<BR>
+<ol>
+  <li type="1">Meets the <a href="http://courses.ncsu.edu/csc116/common/style_guidelines.pdf">style guidelines posted online</a> for the course 
+  <li type="1">Behaves as specified in this document
+  <li type="1">Is thoroughly tested
+  <li type="1">Satisfies the <a href="gradesheet.html"> gradesheet</a> for this assignment
+</ol>
+<p></P>
+<P>You should submit your program through Wolfware:</P>
+<BLOCKQUOTE> <a href="http://wolfware.ncsu.edu/courses/csc116"> http://wolfware.ncsu.edu/courses/csc116</a>
+</blockquote>
+<P>The name of the assignment is <tt class="src_code">Program1</tt>. Submit your <tt class="src_code"><b>.java</b></tt> source code file only. Do not attempt to submit the <tt class="src_code"><b>.class</b></tt> file.</P>
+<P><B>The electronic submission deadline is precise and does not allow for late work. Do not be late.</B> <BR>
+  <BR>
+  Count on the system going down and on other students looking for workstations the last day the assignment is due. Count on serious server delays because everyone is trying to access the submit software during the last few minutes the program is due.</P>
+<P>You are able to make multiple submissions of the same file (the later submissions overwrite the earlier ones with the same file name). To be on the safe side, start submitting your work as soon as you have completed a substantial portion.</P>
+<P>When you turn in your program electronically, print out the <a href="gradesheet.html">grade sheet</a> and fill out the following information:
+<ul>
+  <li>your name
+  <li>your lab instructor's name
+  <li>your lab section number
+</ul>
+<p></P>
+<HR>
+<H2>Hard Copies (On Campus Sections Only)</H2>
+<P>Staple the <a href="gradesheet.html">grade sheet</a> to the top of your program source file listing and bring the entire packet to class on the lecture following the electronic submission deadline. I collect the packets at the <B>beginning</B> of class time. </P>
+<HR>
+</BODY>
+</HTML>

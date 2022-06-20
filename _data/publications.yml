@@ -1,0 +1,163 @@
+publications: 
+  - type: journal-editor
+    papers: 
+      - paper: https://dl.acm.org/citation.cfm?id=3229882
+        reference: "M. Sherriff and S. Heckman, \"Capstones and Large Projects in Computing Education,\" ACM Transactions on Computing Education (TOCE), vol. 18, no. 2, 2018. Impact Factor: 1.821"
+  - type: journal
+    papers: 
+      - paper: https://dl.acm.org/doi/abs/10.1145/3470652
+        reference: "S. Heckman, J. Carver, M. Sherriff, \"A Systematic Literature Review of Empiricism and Norms of Reporting in Computing Education Research Literature,\" ACM Transactions on Computing Education (TOCE), 22(1), pp. 1-46. Impact Factor: 1.721"
+      - paper: https://ieeexplore.ieee.org/document/8693565
+        reference: "N. Gitinabard, Y. Xu, S. Heckman, T. Barnes, C. F. Lynch, \"How Widely Can Prediction Models Be Generalized? Performance Prediction in Blended Courses,\" IEEE Transactions on Learning Technologies, pp. 184-197. Impact Factor: 1.869"
+      - paper: http://dx.doi.org/10.1016/j.infsof.2010.12.007
+        reference: "S. Heckman and L. Williams, \"A Systematic Literature Review of Actionable Alert Identification Techniques for Automated Static Code Analysis,\" Information and Software Technology, vol. 53, no. 4, April 2011, pp. 363-387. Impact Factor: 1.821"
+  - type: proceedings
+    papers:
+      - paper: https://dl.acm.org/doi/proceedings/10.1145/3328778
+        reference: "J. Zhang, M. Sherriff, S. Heckman, A. Monge, P. Cutter, \"SIGCSE '20: Proceedings of the 51st ACM Technical Symposium on Computer Science Education,\" ACM, Portland, OR, USA, 2020."
+      - paper: https://dl.acm.org/doi/proceedings/10.1145/3287324
+        reference: "E. K. Hawthorne, M. A. Pérez-Quiñones, S. Heckman, J. Zhang, \"SIGCSE '19: Proceedings of the 50th ACM Technical Symposium on Computer Science Education,\" ACM, Minneapolis, MN, USA, 2019."
+  - type: full
+    papers:
+      - paper: https://dl.acm.org/doi/abs/10.1145/3478431.3499297
+        reference: "J. Carver, S. Heckman, M. Sherriff, \"Training Computing Educators to Become Computing Education Researchers,\" accepted to the 53rd ACM Technical Symposium on Computer Science Education (SIGCSE 2022), pp. 724-730."
+      - paper: https://dl.acm.org/doi/abs/10.1145/3478431.3499334
+        reference: "Z. Gao, S. Heckman, C. Lynch, \"Who Uses Office Hours? A Comparison of In-Person and Virtual Office Hours Utilization,\" accepted to the 53rd ACM Technical Symposium on Computer Science Education (SIGCSE 2022), pp. 300-306."
+      - paper: https://dl.acm.org/doi/abs/10.1145/3478431.3499367
+        reference: "K. Presler-Marshall, S. Heckman, K. Stolee, \"Identifying Struggling Teams in Software Engineering Courses Through Weekly Surveys,\" accepted to the 53rd ACM Technical Symposium on Computer Science Education (SIGCSE 2022), pp. 126-132."
+      - paper: https://dl.acm.org/doi/abs/10.1145/3478431.3499373
+        reference: "B. Erickson, S. Heckman, C. Lynch, \"Characterizing Student Development Progress: Validating Student Adherence to Project Milestones,\" accepted to the 53rd ACM Technical Symposium on Computer Science Education (SIGCSE 2022), pp. 15-21."
+      - paper: https://dl.acm.org/doi/abs/10.1145/3478431.3499377
+        reference: "N. Gitinabard, S. Heckman, T. Barnes, C. Lynch, \"Designing a Dashboard for Student Teamwork Analysis,\" accepted to the 53rd ACM Technical Symposium on Computer Science Education (SIGCSE 2022), pp. 446-452."
+      - paper: https://ieeexplore.ieee.org/abstract/document/9402177
+        reference: "K. Presler-Marshall, S. Heckman, K. Stolee, \"SQLRepair: Identifying and Repairing Mistakes in Student-Authored SQL Queries,\" Joint Software Engineering Education and Training (JSEET) track of the International Conference on Software Engineering (ICSE), 2021, pp. 199-210."
+      - paper: https://dl.acm.org/doi/abs/10.1145/3408877.3432438
+        reference: "D. Basu, S. Heckman, M. L. Maher, \"Online Vs Face-to-face Web-development Course: Course Strategies, Learning, and Engagement,\" SIGCSE 2021, pp. 1191-1197. (Acceptance Rate: 31%)"
+      - paper: https://arxiv.org/abs/1905.00928
+        reference: "N. Gitinabard, T. Barnes, S. Heckman, C. F. Lynch, \"What will you do next? A sequence analysis on the student transitions between online platforms in blended courses,\" Educational Data Mining 2019, pp. 59-68."
+      - paper: https://dl.acm.org/citation.cfm?id=3159595
+        reference: "S. Heckman and J. King, \"Developing Software Engineering Skills using Real Tools for Automated Grading,\" SIGCSE 2018, pp. 794-799. (Acceptance Rate: 35%)"
+      - paper: https://dl.acm.org/citation.cfm?id=3017745
+        reference: "M. Vellukunnel, P. Buffum, K. E. Boyer, J. Forbes, S. Heckman, K. Mayer-Patel, \"Deconstructing the Discussion Forum: Student Questions and Computer Science Learning,\" SIGCSE 2017, pp. 603-608. (Acceptance Rate: 30%)"
+      - paper: http://dl.acm.org/citation.cfm?id=3017800
+        reference: "A. Smith, K. E. Boyer, J. Forbes, S. Heckman, K. Mayer-Patel, \"My Digital Hand: A Tool for Scaling Up One-to-One Peer Teaching in Support of Computer Science Learning,\" SIGCSE 2017, pp. 549-554. (Acceptance Rate: 30%)"
+      - paper: https://dl.acm.org/citation.cfm?id=2950304
+        reference: "B. Johnson, R. Pandita, J. Smith, D. Ford, S. Elder, E Murphy-Hill, S. Heckman, C. Sadowski, \"A Cross-Tool Communication Study on Program Analysis Tool Notifications,\" Foundations of Software Engineering, Seattle, WA, USA, November 13-18, 2016, pp. 73-84."
+      - paper: http://dl.acm.org/citation.cfm?id=2844601
+        reference: "A. Al-Zubidy, J. Carver, S. Heckman, M. Sherriff, \"A (Updated) Review of Empiricism at the SIGCSE Technical Symposium,\" 2016 SIGCSE Technical Symposium, Memphis, TN, March 2-5, 2016, p. 120-125. (Acceptance Rate: 35.4%)"
+      - paper: publications/H15_ICER.pdf
+        reference: "S. Heckman, \"An Empirical Study of In-Class Laboratories on Student Learning of Linear Data Structures,\" International Computing Education Research Conference (ICER), Omaha, Nebraska, USA, August 9-13, 2015, p. 217-225."
+      - paper: publications/AHV15_JSEET.pdf
+        reference: "Paul V. Anderson, Sarah Heckman, Mladen Vouk, David Wright, Michael Carter, Janet E. Burge, and Gerald C. Gannod, \"CS/SE Instructors Can Improve Student Writing without Reducing Class Time Devoted to Technical Content: Experimental Results,\" Joint Software Engineering Education and Training (JSEET) track of the International Conference of Software Engineering, 2015, p. 455-464."
+      - paper: http://dl.acm.org.prox.lib.ncsu.edu/citation.cfm?id=2499393.2499399&coll=DL&dl=GUIDE&CFID=257667&CFTOKEN=80746469
+        reference: "Sarah Heckman and Laurie Williams, \"A Comparative Evaluation of Static Analysis Actionable Alert Identification Techniques,\" 9th International Conference on Predictive Models in Software Engineering (PROMISE), Baltimore, Maryland, USA, October 9, 2013, Article No. 4."
+      - paper: publications/CFH12_WEEF.pdf
+        reference: "Michael Carter, Robert Fornaro, Sarah Heckman, Margaret Heil, \"Creating a Progression of Writing, Speaking, & Teaming Learning Outcomes in Undergraduate Computer Science/Software Engineering Curricula,\" World Engineering Education Forum (WEEF), Buenos Aires, Argentina, October 15-18, 2012."
+      - paper: publications/HW09_ICST.pdf
+        reference: "Sarah Heckman and Laurie Williams, \"A Model Building Process for Identifying Actionable Static Analysis Alerts,\" 2nd IEEE International Conference on Software Testing, Verification, and Validation (ICST), Denver, CO, USA, April 1-4, 2009, pp. 161-170."
+      - paper: publications/HW08_ESEM.pdf
+        reference: "Sarah Heckman and Laurie Williams, \"On Establishing a Benchmark for Evaluating Static Analysis Alert Prioritization and Classification Techniques,\" Proceedings of the 2nd International Symposium on Empirical Software Engineering and Measurement (ESEM), Kaiserslautern, Germany, October 9-10, 2008, pp. 41-50."
+      - paper: publications/RSY05_CollaborateCon.pdf
+        reference: "Michael Rappa, Sarah E. Smith*, Alex Yacoub, and Laurie Williams, \"OpenSeminar: A Web-Based Collaboration Tool for Open Educational Resources,\" Proceedings of the 1st International Conference on Collaborative Computing: Networking, Applications, and Worksharing (CollaborateCon 2005), San Jose , CA , 2005."
+  - type: other-refereed
+    papers:
+      - paper: https://educationaldatamining.org/files/conferences/EDM2020/papers/paper_153.pdf
+        reference: "N. Gitinabard, R. Okoilu, Y. Xu, S. Heckman, T. Barnes, C. Lynch, \"Student Teamwork on Programming Projects. What can GitHub logs show us?,\" Educational Data Mining, July 10-13, 2020, virtual, pp. 409-416."
+      - paper: https://ieeexplore.ieee.org/abstract/document/9155661/
+        reference: "S. Heckman, J. Y. Schmidt, J. King, \"Integrating Testing Throughout the CS Curriculum,\" 1st International Software Testing Education Workshop (TestEd), Online, October 24-28, 2020, pp. 441-444."
+      - paper: https://dl.acm.org/citation.cfm?id=3338661
+        reference: "K. Presler-Marshall, E. Horton, S. Heckman, K. T. Stolee, \"Wait Wait. No, Tell Me: Analyzing Selenium Configuration Effects on Test Flakiness,\" Proceedings of the 14th International Workshop on Automation of Software Test (AST ’19), Montreal, Quebec, Canada, May 27, 2019, pp. 7-13."
+      - paper: https://dl.acm.org/citation.cfm?id=3183393
+        reference: "S. Heckman, K. T. Stolee, C. Parnin, \"10+ Years of Teaching Software Engineering with iTrust: the Good, the Bad, and the Ugly,\" ICSE-SEET 2018, pp. 1-4. (Acceptance Rate: 28%)"
+      - paper: http://educationaldatamining.org/EDM2017/proc_files/papers/paper_105.pdf
+        reference: "N. Gitinabard, C. F. Lynch, S. Heckman, T. Barnes, \"Identifying Student Communities in Blended Courses,\" Proceedings of the 10th International Conference on Educational Data Mining, pp. 378-379."
+      - paper: https://dl.acm.org/citation.cfm?id=2803197
+        reference: "Brittany Johnson, Rahul Pandita, Emerson Murphy-Hill, Sarah Heckman, \"Bespoke Tools: Adapted to the Concepts Developers Know,\" 10th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, NIER Track, Bergamo, Italy, August 30-September 4, 2015, p. 878-881."
+      - paper: publications/SHL07_CASCON.pdf
+        reference: "Mark Sherriff, Sarah Smith Heckman, Mike Lake, Laurie Williams, \"Identifying Fault-Prone Files Using Static Analysis Alerts Through Singular Value Decomposition,\" Short Paper, Proceedings of the 2007 Conference of the Center for Advanced Studies on Collaborative Research (CASCON 2007), Richmond Hill, Ontario, Canada, October 22-25, 2007, pp. 276-279."
+      - paper: publications/SHL07_FSE.pdf
+        reference: "Mark Sherriff, Sarah Smith Heckman, Mike Lake, Laurie Williams, \"Using Groupings of Static Analysis Alerts to Identify Files Likely to Contain Field Failures,\" Short Paper, Proceedings of the 6th Join Meeting of the European Software Engineering Conference and the ACM SIGCOFT Symposium on the Foundations of Software Engineering (FSE 2007), Dubrovnik, Croatia, September 2-7, 2007, pp. 565-568."
+      - paper: publications/H07_ICSE.pdf
+        reference: "Sarah Smith Heckman, \"Adaptive Probabilistic Model for Ranking Code-Based Static Analysis Alerts,\" Doctoral Symposium, 29th International Conference on Software Engineering (ICSE 2007), Minneapolis, MN, 2007, pp. 89-90."
+      - paper: publications/HW06_ISSRE.pdf
+        reference: "Sarah Smith Heckman and Laurie Williams, \"Automated Adaptive Ranking and Filtering of Static Analysis Alerts,\" Fast Abstract, 17th IEEE International Symposium on Software Reliability Engineering (ISSRE 2006), Raleigh, North Carolina, 2006."
+      - paper: publications/RSY06_CSEET.pdf
+        reference: "Michael Rappa, Sarah E. Smith*, and Alex Yacoub, \"Open Course Resources as Part of the OpenSeminar in Software Engineering,\" 19th Conference on Software Education and Training (CSEE&T 2006), Turtle Bay, Hawaii, 2006, pp. 187-189."
+      - paper: publications/SWX05_ISSRE.pdf
+        reference: "Sarah E. Smith*, Laurie Williams, and Jun Xu, \"Expediting Programmer AWAREness of Anomalous Code,\" Fast Abstract, 16th IEEE International Symposium on Software Reliability Engineering (ISSRE 2005), Chicago, Illinois, 2005."        
+      - paper: publications/WSR05_CSEET.pdf
+        reference: "Laurie Williams, Sarah E. Smith*, Michael Rappa, \"Resources for Agile Software Development in the Software Engineering Course,\" 18th Conference on Software Engineering Education and Training (CSEE&T 2005), pp. 236-238."
+  - type: magazine
+    papers:
+      - paper: https://dl.acm.org/citation.cfm?id=3329104
+        reference: "E. K. Hawthorne, M. A. Pérez-Quiñones, S. Heckman, J. Zhang, \"SIGCSE Technical Symposium 2019 Report\" ACM SIGCSE Bulletin, vol. 51, no. 2, April 2019, p. 2-4."
+      - paper: https://dl.acm.org/citation.cfm?id=3243073
+        reference: "S. Heckman, J. Zhang, M. A. Pérez-Quiñones, E. K. Hawthorne, \"What is a SIGCSE Symposium Paper?,\" ACM SIGCSE Bulletin, vol. 50, no. 3, July 2018, p. 3."
+      - paper: https://dl.acm.org/citation.cfm?id=3212404
+        reference: "S. Heckman, J. Zhang, M. A. Pérez-Quiñones, E. K. Hawthorne, \"SIGCSE 2019 Paper Length Change,\" ACM SIGCSE Bulletin, vol. 50, no 2., April 2018, p. 4."
+      - paper: http://www.acm.org/crossroads/xrds14-1/adaptive.html
+        reference: "S. S. Heckman, \"Adaptively Ranking Alerts Generated from Automated Static Analysis,\" ACM Crossroads, vol. 14, no. 1, Winter 2007, pp. 16-20."
+      - paper: publications/SP05_EDUCAUSEReview.pdf
+        reference: "S. E. Smith and A. Potoczniak, \"Five Points of Connectivity,\" in EDUCAUSE Review, vol. 40, September/October 2005, pp. 30-40."
+  - type: workshops
+    papers:
+      - paper: https://dl.acm.org/citation.cfm?id=3162350
+        reference: "S. Heckman, J. Carver, M. Sherriff, \"Designing Empirical Education Research Studies (DEERS): Creating an Answerable Research Question,\" SIGCSE 2018 Workshop."
+      - paper: https://dl.acm.org/citation.cfm?id=3017836
+        reference: "S. Heckman, J. Carver, M. Sherriff, \"Designing Empirical Education Research Studies (DEERS): Creating an Answerable Research Question,\" SIGCSE 2017 Workshop."
+      - paper: https://stardock.cs.virginia.edu/empirical/
+        reference: "M. Sherriff and S. Heckman, \"Empirical Research in CS Education,\" Birds of a Feather, SIGCSE Technical Symposium, 2015, p. 701."
+      - paper: http://dx.doi.org.prox.lib.ncsu.edu/10.1109/CSEET.2011.5876144
+        reference: "S. Heckman, T. B. Horton, and M. Sherriff, \"Teaching Second-Level Java and Software Engineering with Android,\" 24th IEEE-CS Conference on Software Engineering Education and Training (CSEE&T), Honolulu, Hawaii, May 22-24, 2011, pp. 540-542."        
+  - type: refereed-abstract
+    papers:
+      - paper: publications/HG13_ISSOTL.pdf
+        reference: "S. Heckman and E. Gehringer \"Google Forms as an Enhanced Classroom Response System,\" Abstract: International Society for the Scholarship of Teaching and Learning (ISSOTL 13)."
+  - type: tech-reports
+    papers:
+      - paper: ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2015/TR-2015-1.pdf
+        reference: "S. Heckman, A. Al-Zubidy, J. C. Carver, M. Sherriff, \"A (Updated) Review of Empiricism at the SIGCSE Technical Symposium,\" NCSU Technical Report, TR-2015-1, January 5, 2015."
+      - paper: ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2012/TR-2012-7.pdf
+        reference: "M. Carter, R. Fornaro, S. Heckman, and M. Heil, \"Developing a Learning Progression that Integrates Communication in an Undergraduate CS/SE Curriculum,\" NCSU Technical Report, TR-2012-7, May 25, 2012."
+      - paper: ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2010/TR-2010-17.pdf
+        reference: "S. Heckman and L. Williams, \"A Systematic Literature Review of Actionable Alert Identification Techniques for Automated Static Code Analysis\", NCSU Technical Report, TR-2010-17, July 23, 2010."
+      - paper: ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2008/TR-2008-23.pdf
+        reference: "S. Heckman and L. Williams, \"A Measurement Framework of Alert Characteristics for False Positive Mitigation Models,\" NCSU Technical Report, TR-2008-23, October 28, 2008."
+      - paper: ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2008/TR-2008-11.pdf
+        reference: "S. S. Heckman and L. Williams, \"On Establishing a Benchmark for Evaluating Static Analysis Alert Prioritization and Classification Techniques,\" NCSU Technical Report, TR-2008-11, April 24, 2008."        
+  - type: posters
+    papers:
+      - paper: publications/2016_SIGCSE_SEBP_Poster.pdf
+        reference: "S. Heckman, J. King, \"Teaching Software Engineering Skills in CS1.5: Incorporating Real-world Practices and Tools,\" Poster: NC State 2016 Teaching and Learning Symposium, 2016."
+      - paper: publications/2016_SIGCSE_SEBP_Poster.pdf
+        reference: "S. Heckman, J. King, \"Teaching Software Engineering Skills in CS1.5: Incorporating Real-world Practices and Tools,\" Poster: 2016 SIGCSE Technical Symposium, 2016, p. 696-697."
+      - paper: publications/2015_ICER_CIforSE_Poster.pdf
+        reference: "S. Heckman, \"A Continuous Integration Framework for Promoting Software Engineering Best Practices,\" Poster: International Computer Education Research Conference, 2015."
+      - paper: publications/2015_NCSU_OFD_TLS.pdf
+        reference: "S. Heckman, \"An Investigation of In-class Labs on Student Learning of Linear Data Structures,\" Poster: NC State 2015 Teaching and Learning Symposium, 2015."
+      - paper: publications/HKW15_SIGCSE_Poster.pdf
+        reference: "S. Heckman, J. King, M. Winters, \"Automating Software Engineering Best Practices Using an Open Source Continuous Integration Framework,\" Poster: 2015 SIGCSE Technical Symposium, 2015, p. 677. Acceptance Rate: 44%."
+      - paper: publications/2014_NCSU_OFD_TLS.pdf
+        reference: "S. Heckman, \"Integrating Communication Assessments into Undergraduate Computer Science Core Courses,\" Poster: NC State 2014 Teaching and Learning Symposium, 2014."
+      - paper: publications/2013_NCSU_OFD_TLS.pdf
+        reference: "E. Gehringer and S. Heckman, \"Google Forms as an Enhanced Classroom Response System,\" Poster: NC State 2013 Teaching and Learning Symposium, 2013."
+      - paper: 
+        reference: "S. Heckman, L. Layman, S. Thomas, L. Williams, T. Xie., \"On Expediting Software Engineer AWAREness of Anomalous Code,\" Poster: Center for Advanced Computing and Communication and IBM University Day, 2006."
+      - paper: 
+        reference: "S. E. Smith, L. Williams, and J. Xu, \"Continuous Checking of Static Analysis and Automated Unit Test for Java Programs,\" Poster: Center for Advanced Computing and Communication and IBM University Day, 2005 – 2006."
+      - paper: 
+        reference: "S. E. Smith. \"Collaborative Courseware Development,\" Poster: The 13th Annual NC State University Undergraduate Research Symposium, 2004."
+  - type: assignments
+    papers:
+      - paper: https://www.engage-csedu.org/find-resources/testing-java-collections-framework
+        reference: "Sarah Heckman, \"Testing the Java Collections Framework,\" submitted to the NCWIT Engage CS Edu repository."
+      - paper: http://cs-comm.lib.muohio.edu/items/show/16
+        reference: "Sarah Heckman, \"Black Box Test Plan - Bug Hunt,\" Incorporating Communication Outcomes into the Computer Science Curriculum, accessed May 29, 2014."
+      - paper: http://cs-comm.lib.muohio.edu/items/show/38
+        reference: "Sarah Heckman, Ed Gehringer, \"Design Proposal and Rationale,\" Incorporating Communication Outcomes into the Computer Science Curriculum, accessed May 29, 2014."
+        
+  - type: dissertation
+    papers:
+      - paper: http://repository.lib.ncsu.edu/ir/handle/1840.16/5093
+        reference: "Sarah Smith Heckman, <em>A Systematic Model Building Process for Predicting Actionable Static Analysis Alerts</em>, Dissertation, Computer Science, North Carolina State University, 2009."
+  

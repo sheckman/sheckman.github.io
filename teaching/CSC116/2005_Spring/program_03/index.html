@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+<TITLE>Computer Science 116: Introduction to Java</TITLE>
+</HEAD>
+<BODY>
+
+
+<H1>Program 3: Java to HTML Converter</H1> 
+<H2>Submit date:  Sunday, 3 April 2005 at 11:55 p.m.</H2>
+
+<hr>
+<H2>Software Overview</H2>
+<P>One of the problems with presenting Java programs online as source
+code is that HTML does not allow certain characters to be easily displayed.
+HTML also ignores multiple spaces for indention.  You could use the 
+&lt;PRE&gt; tag to keep the code formatting, but that results in lines 
+which do not wrap and can cause odd looking HTML.</P>
+<P>Your job is to design a program which will allow a user to translate
+a valid Java source code file to a HTML file.  This means that the user
+will provide you with the name of a Java source code file in your GUI,
+and you will translate it to HTML and provide the user feedback.</P>
+<P>The translation must add four lines to make a valid HTML file.  You
+must add the lines:<BR>
+&lt;HTML&gt;<BR>
+&lt;BODY&gt;<BR>
+to the top of the HTML prior to the translated material.  You must
+then follow the translated material with the lines:<BR>
+&lt;/BODY&gt;<BR>
+&lt;/HTML&gt;<BR>
+</P>
+<P>The IO will be performed in the JavaHtmlModel class.  That
+class will be responsible for reading the input and passing
+each line to the translator.  The JavaHtmlModel class will be
+responsible for adding the two lines to the top and bottom of
+the file.</P>
+<P>Between these tags you will translate the Java to HTML.  The 
+translation is a line by line translation.  There are three stages
+to the translation.  The translation of the line will occur
+in the JavaHtmlLine code.  This code will need to perform no 
+file IO, but will receive the data from the JavaHtmlModel to 
+translate.</P>
+<P>The first stage of the translation is to replace all of the spaces
+and tabs at the beginning of the line with the &amp;nbsp; non-breaking space 
+character text.  That means
+if the file contains four spaces you would replace then with the
+text &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .  Make sure you replace
+each space with the &nbsp; text and remove the space in the process.  The
+text should have no leading or trailing space added to it.</P>
+<P>The first stage will end as soon as you find a non-space or non-tab
+character.</P>
+<P>The second stage will be to replace characters which are not valid 
+with their equivalent.  For each replacement you should replace the 
+character which is a problem with the exact text without adding any
+extra spaces.</P>
+<P>The characters to translate are:
+<UL>
+	<LI>The &amp; character must be translated to the &amp;amp; text
+	<LI>The &lt; character must be translated to the &amp;lt; text
+	<LI>The &gt; character must be translated to the &amp;gt; text
+</UL>
+You must replace each occurrence of the offending character with the 
+valid HTML text substitution.</P>
+<P>The third stage is the add the &lt;BR&gt; tag to the end of the line.
+You should add this tag right after the last character of the input line
+and it should be the last thing on the line with no trailing spaces.</P>	
+<P>The JavaHTML program will read all of the input from a text
+file and output the results to a text file.  The GUI will display
+the status of the operation.  The outputs which the GUI can display
+include:
+<UL>
+	<LI>Unable to open input file!
+	<LI>Unable to open output file!
+</UL>
+If either of these two conditions occur you should close any
+open files and not perform any translation.  The application
+can also encounter errors during or after the translation.
+These include:
+<UL>
+	<LI>Error during translation!
+	<LI>Error closing files!
+</UL>
+All, some or none of these errors may occur.  If any of these
+errors occur then they should be displayed and no other status
+should be displayed.  All of these errors will be caused by
+an IOException, which is the only exception type you need to 
+check for in the application.
+</P>
+<P>If the input is read, translated to html, and output 
+with no errors then the message "Translated xx lines from yy to
+HTML in zz"  The count of input lines should be
+include all lines in the input file.  The value xx is the count
+of lines in the input file.  The yy value is the name of the Java
+source file.  The zz value is the name of the HTML output file.  
+For example from the included Hello.java you would receive the 
+message: "Translated 14 lines from Hello.java to HTML in Hello.html".
+</P>
+<P>The GUI should be identical to the GUI in the sample application.
+The application must include several major elements.
+The items include a label for the
+input file name, the JTextArea for input file name,
+a label for the status, the JTextArea for status, and a JButton.
+The user will input the input file name
+in the text box and press the "Go" button to update
+the status.  The status area will show either an error message
+or output the statistics.</P>
+<P>The model will include setInputFilename method which will be
+used by the GUI to update the file name.  It will also include
+a getStatus method which will generate a String and return
+it to be displayed in the GUI.</P>
+<P>Make sure you view the sample input and output files described below.</P>
+<HR>
+<H2>Requirements </H2>
+<P>Your program must create the class JavaHtmlLine and implement
+the following public methods:
+<DL>
+	<DT>public JavaHtmlLine()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must set the initial value of
+	the line to an empty, zero length String.</DD>
+	<DT>public void setLine(String)</DT>
+	<DD>Method, which will accept a single String as a parameter
+	and set the value of the line to that String.  This
+	method should NOT change the value of the input line if it
+	is provided a null value.</DD>
+	<DT>public String getLine()</DT>
+	<DD>This will return the value of the instance variable
+	in the original form without translation.</DD>
+	<DT>public String getHtmlLine()</DT>
+	<DD>Gets the line translated into HTML.  This follows
+	the rules given in the overview portion of the assignment
+	to convert a single line to HTML.  This should <B>NOT</B>
+	corrupt the original input value, because the user may
+	call getLine to see the original input.</DD>
+	<DT>public static void main(String[] args)</DT>
+	<DD>Main method which should contain your test code to
+	show you have tested your model.  This will prove your
+	code has been tested and is a <B>REQUIRED</B> method.</DD>
+</DL>
+</P>
+<P>Your program must create the class JavaHtmlModel and implement
+the following public methods:
+<DL>
+	<DT>public JavaHtmlModel()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must set the initial value of
+	the input file name and output file name to an empty, zero
+	length String and the status to "None".</DD>
+	<DT>public void setInputFilename(String)</DT>
+	<DD>Method, which will accept a single String as a parameter
+	and set the value of the input file to that String.  This
+	method should NOT change the value of the input file
+	if it is provided a null value. The file name provided
+	should include the entire name including the extension of 
+	the file.</DD>
+	<DT>public String getOutputFilename()</DT>
+	<DD>Method which will translate the input file name to
+	an output file name which is the same name with the
+	extension changed to .html instead of .java as per
+	the specifications.</DD>
+	<DT>public String getStatus()</DT>
+	<DD>Method, which will return either an error String
+	or the status of the translation a single String.</DD>
+	<DT>public void translate()</DT>
+	<DD>This method will perform the actual translation from
+	the input to the output file.  The actual opening, processing
+	and closing of the files will occur here.  This is also 
+	where the individual lines will be fed to a JavaHtmlLine
+	object.</DD>
+	<DT>public static void main(String[] args)</DT>
+	<DD>Main method which should contain your test code to
+	show you have tested your model.  This will prove your
+	code has been tested and is a <B>REQUIRED</B> method.</DD>
+</DL>
+</P>
+<P>Your program must create the class JavaHtmlGui and implement
+the following public methods:
+<DL>
+	<DT>public JavaHtmlGui()</DT>
+	<DD>Null constructor, which must initialize all of your
+	instance variables.  This must create the GUI and set
+	it up.</DD>
+	<DT>public void actionPerformed (ActionEvent)</DT>
+	<DD>This method is required to handle the actions 
+	generated from the button.</DD>
+	<DT>public void main(String[])</DT>
+	<DD>This method must be exactly as given below:<BR>
+<CODE><BR>
+&nbsp;&nbsp;public static void main (String args[]) {<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;JavaHtmlGui myGui = new JavaHtmlGui();<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;myGui.show();<BR>
+&nbsp;&nbsp;}<BR>
+</CODE>
+</DD>
+</DL>
+<P>You may not have <B>ANY OTHER PUBLIC ITEMS</B> in your code.
+All other items must be private.  Your code must run with the 
+given main method and must meet the specifications below.</P>
+<HR>
+<H2>GUI Specification</H2>
+<P>The input JTextAreas should be a single line tall and allow
+the user to input a value.  It will be preceded by a single
+JLabel describing the input areas.</P>
+<P>The output JTextArea should be 10 lines tall and be inside
+a JScrollPane.  The JTextArea should have scrolling enabled
+and should not allow the user to edit the area.  The code below
+is a demonstration of how to setup the JTextArea:<BR>
+<CODE><BR>
+JTextArea output = new JTextArea(10,40); //Create the text area<BR>
+output.setEditable(false); //Do not allow the user to edit<BR>
+output.setLineWrap(true); //Allow the lines to wrap<BR>
+output.setWrapStyleWord(true); //Wrap at the white spaces<BR>
+JScrollPane outputScroll = new JScrollPane(output); //Let the text area scroll<BR>
+</CODE>
+<BR>
+These items require javax.swing.* and java.awt.* be imported.</P>
+<P>The GUI must implement the actionPerformed method.  The only
+item which should trigger this method to run is the user pressing
+the "Go" button.  The pressing of the "Go" button should be used
+to run the translation in the model and then to update the
+status display.</P>
+<P>Remember that in order for the GUI to use the model object
+you must create a local variable of type JavaHtmlModel
+inside the GUI.</P>
+<P>
+<HR>
+<H2>Sample Items and Pregrading</H2>
+<P>There is NO formal pregrading available for this program.  Instead
+we offer you two other options for you to evaluate your own code.  You
+can download to jar files:
+<UL>
+	<LI><A HREF="JavaHtml.jar">Java to HTML sample program</A>
+	<LI><A HREF="JavaHtmlGrader.jar">Java to HTML conformance grader</A>
+</UL>
+To run the sample program you should download the jar and type
+"java -jar JavaHtml.jar".  This will allow you to run the full
+program.  Do not attempt to use the code from this program in
+your own work in any way.</P>
+<P>The grader program will verify that all three of your class
+files meet the program specifications.  To use this you should
+place the jar in the same directory with your compiled, working
+program and run "java -jar JavaHtmlGrader.jar all".  This will
+test all three of your classes to ensure the public items in the
+class meet our requirements.  <B>THIS IS ONLY TESTING THE
+METHODS MEET THE PROGRAM SPEC!!! YOU MUST TEST THE FUNCTIONALITY
+YOURSELF.</B></P>
+<P>We have also included a sample input <A HREF="Hello.java">Hello.java</A>
+and a sample output <A HREF="Hello.html">Hello.html</A> which you
+may view to compare to your output.</P>
+<P><A HREF="javadoc">Click here</A> to view a sample of the JavaDoc
+from the answer key.  You should reference this in the design of 
+your program to make sure you are using the correct method signatures.
+</P>
+<HR>
+<H2>Extra Credit</H2>
+<P>Extra credit will be offered for assignments that are submitted
+early.  You will receive one points of extra credit for each full 
+day early that you submit your program.  A maximum of 10 points of
+extra credit may be obtained.  We will examine the dates of the files
+in your submit locker to determine the amount of extra credit.  The
+file with the latest submission date will be the date we use to determine
+the extra credit.</P>
+<P>In order for you to receive extra credit you <B>MUST</B> submit
+a working program that meets the project specifications.  Programs
+which do not compile or deviate from the specifications will not
+receive extra credit.</P>
+<HR>
+<H2>Documentation Specifications</H2>
+<P>Each method, instance variable and class you write in 
+JavaHtmlLine.java, JavaHtmlModel.java and JavaHtmlGui.java must be documented
+using the JavaDoc style of documentation.  Remember 
+all JavaDoc starts with /** and ends with */. The course style
+guidelines contain information on using JavaDoc.</P> 
+<P>Remember that when generating JavaDoc you must first document
+the description of the item (method, instance variable, or class) and then
+put your tags (@author, @param, and/or @version).  Good places to
+find JavaDoc examples include:
+<UL>
+	<LI>Class style guidelines (linked from syllabus)
+	<LI>All course sample code in the lectures (linked off each lecture)
+	<LI>Course textbook
+</UL>
+</P>
+<HR>
+<H2>Working on your program during lab</H2>
+
+<P>Part of two sessions of lab have been set-aside for you to work on 
+your program.  You are REQUIRED to work during the entire allocated
+lab time on your program, unless it is complete.</P>
+
+<P>While working in lab on your program, the <B>ONLY</B> person who
+you should consult for assistance is the lab instructor.  Working
+with other students on this program is strictly forbidden.</P>
+<P>You are expected to work on your code during lab.  You may not
+leave lab until a TA has cleared that your code is working and
+submitted and the lab for that session is working and submitted.</P>
+
+<HR>
+<H2>Submitting Your Code</H2>
+
+<p>Before you submit your work, make sure the program:<BR>
+<ol>
+<li type="1">meets the <a href="http://courses.ncsu.edu/csc116/common/style_guidelines.pdf">style guidelines posted online</a> for the course  </b> 
+<li type="1">behaves as specified in this document. You should test your
+code thoroughly. Be sure to know what results should displayed for
+each major scenario.
+<li type="1">Is thoroughly tested
+<li type="1">satisfies the <a href="gradesheet.html">
+gradesheet</a> for this assignment.
+</ol>
+</P>
+<P>You should submit your program through Wolfware Submit:</P>
+<BLOCKQUOTE>
+<a href="http://submit.ncsu.edu">
+http://submit.ncsu.edu</a>
+</blockquote>
+<P>The name of the assignment is <tt>Program3</tt>. Submit
+your source code file, JavaHtmlLine.java, 
+JavaHtmlModel.java and JavaHtmlGui.java
+only. Do not attempt to submit <tt><b>.class</b></tt> files.</P>
+<P><B>The electronic submission deadline is precise 
+and does not allow for late work. Do not be late.</B> </P>
+<P>Count on the system going down and on other students looking
+for workstations the last day the assignment is due. Count on serious
+server delays because everyone is trying to access the submit software
+during the last few minutes the program is due.</P>
+<P>You are able to make multiple submissions of the same file 
+(the later submissions overwrite the earlier ones with the same file name). 
+To be on the safe side, start submitting your work as soon as you have 
+completed a substantial portion.</P>
+<HR>
+<H2>Hard Copies (On Campus Sections Only)</H2>
+<P>When you turn in your program electronically, 
+print off the <a href="gradesheet.html">grade sheet</a>
+and fill out the following information:<BR>
+<ul>
+<li>your name
+<li>your lab instructor's name
+<li>your lab section number
+</ul>
+</P>
+
+<P>Staple the <a href="gradesheet.html">grade sheet</a> to the
+top of your program source file listing and bring the entire packet to
+class on the lecture following the electronic submission deadline. I
+collect the packets at the <B>beginning</B> of class time.
+</P>
+<HR>
+</BODY>
+</HTML>

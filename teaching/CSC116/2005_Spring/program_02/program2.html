@@ -1,0 +1,278 @@
+<HTML>
+
+<HEAD>
+<TITLE>Computer Science 116: Introduction to Java</TITLE>
+</HEAD>
+
+<BODY>
+<h1 align= center>Program 2: Math is Fun </h1>
+<hr>
+<H3>Submit date: Sunday, March 13  2005 at 11:55 p.m. </H3>
+<hr>
+Contrary to what  Barbie dolls said a few years ago, math is
+not hard, it is fun! 
+<p>
+For program 2, you will write a program that implements a game to teach
+arithmetic to your younger brother/sister.  The program will test
+addition and subtraction.
+<hr>
+<h2>Requirements</h2>
+Requirements explain <i>what</i> a program must do.
+<p>
+Your game will provide 4 levels of play.
+<p>
+Level 1: Tests addition of two, positive, single-digit numbers. <br>
+Level 2: Tests addition of two, positive, two-digit numbers. <br>
+Level 3: Tests subtraction of two, positive, single-digit numbers. <br>
+Level 4: Tests subtraction of two, positive, two-digit numbers.
+<p>
+Consider zero to be a positive number
+<p>
+Generate random problems and get the player's input. The player gets
+2 tries per problem. Advance from one level to the next when the player
+has achieved a score of five points on the previous level. One point is
+awarded for each correct answer.
+<p>
+After a player has reached level 4, just repeat problems on that level
+until the player quits playing or starts a new game.
+<p>
+Provide a mechanism for the player to start a new game and a way to
+quit.
+<p>
+The player interface must be graphical.
+<p>
+The picture below shows how the interface might look. You can structure
+your interface differently if you wish as long as you follow the
+specifications below.
+<p>
+<center>
+<img src = "gui.gif" width = 400 height = 150></img>
+</center>
+<p>
+<hr>
+<h2>Design Specification</h2>
+Design specifications provide details on <i>how</i> you must implement
+the program.
+<p>
+Your program must consist of two classes:
+<li> a GamePlayGUI class
+<li> a GamePlayModel class
+
+<p>
+The GamePlayGUI class provides the "view" of your program and the
+GamePlayModel class provides the "model".  
+<hr>
+<h3>GamePlayGUI Class Specification</h3>
+Your GUI class will have 3 methods:
+<li> public GamePlayGUI (GamePlayModel model) // constructor
+<li> public void actionPerformed (ActionEvent event) // responds to button clicks
+<li> public static void main(String [ ] args) 
+
+<p>
+The <code>main()</code> method must be 
+<pre><b>
+public static void main (String [] args) {
+
+&nbsp;&nbsp;GamePlayModel model = new GamePlayModel();
+&nbsp;&nbsp;GamePlayGUI   gui   = new GamePlayGUI( model );
+}
+</b></pre>
+
+Since this is the first GUI that you will write, we decided to provide some
+assistance by giving you the source code for a program that converts
+degrees fahrenheit to degrees celsius.
+<p>
+The GUI looks like this:
+<p>
+<center>
+<img src= "f2c.gif" width = 300 height = 120>
+</img>
+</center>
+And here is the code that produced it:
+<li><a href = "FahrtoCelsiusGUI.java">FahrtoCelsiusGUI.java</a>
+and the model code
+<li><a href = "FahrtoCelsiusModel.java">FahrtoCelsiusModel.java</a>
+
+
+
+<hr>
+<h3>GamePlayModel Class Specification</h3>
+
+Your GamePlayModel class must contain appropriate instance variables and 
+methods useful for this application. You must include a <code>main()</code> method in this class that
+provides "unit testing" for the class. In particular, your <code>main() </code>method should
+call all of the methods in the class and print the results to the screen.
+<h3>Required Methods</h3>
+The GamePlayModel class must have the following public methods. 
+<b>
+<li> public GamePlayModel() // the constructor
+<li> public String getProblem() //returns the problem for the player to solve
+<li> public void   processAnswer( String guess) //determines correctness of answer
+<li> public String getMessage() //returns feedback to the player on correctness
+                                  
+<li> public int    getScore( ) //returns the current score for display 
+<li> public void   startNewGame() //starts a new game
+<li> public static void main (String [ ] args) //provides unit testing of class methods
+</b>
+
+<p>
+Here is an example of how to test your class in the main method.  You must
+add atleast <b>two</b> more test cases similar to this one.
+
+<pre><b>
+public static void main(String [] args) {
+
+     GamePlayModel model = new GamePlayModel();
+     System.out.println(model.getProblem());
+     model.processAnswer("3");
+     System.out.println(model.getMessage());
+     System.out.println("Current Score: " + model.getScore());
+     model.startNewGame();
+     System.out.println("Current Score: " + model.getScore());
+     
+     //add extra test cases here
+}
+
+</pre></b>
+
+
+<hr>
+<h4>Random Numbers</h4>
+You will need a random number generator to create new problems for the player.
+<p>
+Random numbers are not truly random. They are generated based on some seed
+value (e.g. a value created from  time of day). Java provides several 
+tools for generating these pseudo-random values. For this assignment, you
+must use the <b>Random</b> class. 
+<p>Provide this import statement at the top of the source file:
+<p>
+<pre><b>
+import java.util.*;
+</b></pre>
+<p>
+Create a <b>Random</b> object in your constructor.
+Make the Random object reference an instance variable.
+<p>
+Use the <b>nextInt()</b> method to generate
+the random numbers for your sample problems.
+<p>
+<b>nextInt(n) </b>returns a random integer value between 0 and (n-1).
+For example,
+<pre><b>
+private Random r; //<i> instance variable</i>
+
+
+r = new Random(); //<i>goes in constructor</i>
+
+
+int operand1;
+operand1 = r.nextInt(10); //<i>use in getProblem() method</i>
+</b></pre>
+results in  0,1,2,3,4,5,6,7,8, or 9 being stored in <code>operand1</code>.
+  <hr>
+<h4> Strings to ints</h4>
+Values typed into text fields are returned as a String value. This value
+will be passed from your GUI to your model. The <code><b>processAnswer
+(String guess)
+</b></code> method will have to determine if the guess is the correct
+answer. 
+<p>
+In order to do this, the <code>String</code> must be converted to an
+<code>int</code> value. Here is how to do the conversion:
+
+<pre><b>
+int  value;
+
+value = Integer.parseInt( guess );
+</b></pre>
+Unfortunately, an exception will be thrown if the value can not be converted
+to an integer. For example, the player typed <code>go pack!</code> for the
+ problem
+answer. <b>For this assignment, you may assume the player typed a valid integer
+value.</b>
+<hr>
+<h3>Sample Applet</h3>
+One of the CSC116 TAs, Alex Balik, wrote his version of the program as
+a java applet that runs inside the browser. You can check it out
+<a href = "display.html">here</a>.
+<p>
+Notice that only one of the text fields in the applet can be edited.  You are not 
+required to do this, but the following command will make a textfield uneditable.
+<pre><b>
+JTextField myTextField = new JTextField("This textfield can't be edited");
+
+myTextField.setEditable(false);
+</b></pre>
+
+<hr>
+<H2>Extra Credit</H2>
+<P>Extra credit will be offered for assignments that are submitted
+early.  You will receive 1 point of extra credit for each full 
+day early that you submit your program.  A maximum of 10 points of
+extra credit may be obtained.  We will examine the dates of the files
+in your submit locker to determine the amount of extra credit.  The
+file with the latest submission date will be the date we use to determine
+the extra credit.</P>
+<P>In order for you to receive extra credit you <B>MUST</B> submit
+a working program that meets the project specifications and
+receive a grade of 80% or greater prior to the extra credit.  Programs
+which do not compile or deviate from the specifications will not
+receive extra credit.</P>
+<HR>
+
+<h2>Submitting Your Code</H2>
+
+<p>Before you submit your work, make sure the program:<BR>
+<ol>
+<li type="1">Meets the <a href="http://courses.ncsu.edu/csc116/common/style_guid
+elines.pdf">style guidelines posted online</a> for the course</b>
+<li type="1">Behaves as specified in this document
+<li type="1">Is thoroughly tested
+<li type="1">Satisfies the <a href="gradesheet2.html">
+gradesheet</a> for this assignment
+</ol>
+</P>
+<P>You should submit your program through Wolfware:</P>
+
+<BLOCKQUOTE>
+<a href="http://wolfware.ncsu.edu/courses/csc116">
+http://wolfware.ncsu.edu/courses/csc116</a>
+</blockquote>
+<BR>
+<P>The name of the assignment is <tt>Program2</tt>. Submit
+your <tt><b>.java</b></tt> source code file only.
+Do not attempt to submit the <tt><b>.class</b></tt> file.</P>
+<P><B>The electronic submission deadline is precise and does
+not allow for late work. Do not be late.</B> <BR>
+<BR>
+Count on the system going down and on other students looking
+for workstations the last day the assignment is due. Count on serious
+server delays because everyone is trying to access the submit software
+during the last few minutes the program is due.</P>
+
+<P>You are able to make multiple submissions of the same file
+(the later submissions overwrite the earlier ones with the same file name).
+To be on the safe side, start submitting your work as soon as you have
+completed a substantial portion.</P>
+
+<P>When you turn in your program electronically,
+print out the <a href="gradesheet2.html">grade sheet</a>
+and fill out the following information:<BR>
+<ul>
+<li>your name
+<li>your lab instructor's name
+<li>your lab section number
+</ul>
+</P>
+<HR>
+<H3>Hard Copies (On Campus Sections Only)</H3>
+<P>Staple the <a href="gradesheet2.html">grade sheet</a> to the
+top of your program source file listing and bring the entire packet to
+class on the lecture following the electronic submission deadline. I
+collect the packets at the <B>beginning</B> of class time.
+</P>
+ 
+   
+</body></html>
+
+   

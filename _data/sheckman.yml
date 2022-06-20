@@ -1,0 +1,20 @@
+navigation:
+  - name: About
+    link: index.html
+  - name: Teaching
+    link: teaching.html
+  - name: Research
+    link: research.html
+  - name: Service
+    link: service.html
+  - name: Publications
+    link: publications.html
+  - name: CV
+    link: assets/Heckman_CV.pdf
+
+office_hours:
+  semester: Summer 2022
+  start_date: 5/16/2022
+  end_date: 8/21/2022
+  listing: 
+    - item: "email to make an appointment"

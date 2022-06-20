@@ -1,0 +1,9 @@
+<ul>
+{% for pub-type in site.data.publications.publications %}
+  {% if pub-type.type == include.type %}
+    {% for paper in pub-type.papers %}
+      <li>{{paper.reference}} <a href="{{paper.paper}}">[Paper]</a> </li>
+	{% endfor %}
+  {% endif %}
+{% endfor %}
+</ul>
