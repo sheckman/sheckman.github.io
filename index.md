@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<img class="profilepic" src="../assets/images/2017_Heckman_Small.jpg" width="150px"  alt="Heckman Picture"/>
+<img class="profilepic" src="../assets/images/Heckman.jpg" width="150px"  alt="Heckman Picture"/>
 
 # Sarah S. Heckman
 
